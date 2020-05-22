@@ -27,7 +27,8 @@ export default class CourseRowComponent extends React.Component {
 
   render() {
     return(
-        <tr className="wbdv-row wbdv-course">
+        <tr className={this.props.selected === this.state.course._id ? 'table-primary' : ''}
+            onClick={() => this.props.selectCourse(this.state.course._id)}>
             <td className="large-cell align-middle">
                 <div className="form-group row text-truncate">
                     <div className="col-xs-1">

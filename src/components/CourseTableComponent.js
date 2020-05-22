@@ -20,7 +20,7 @@ export default class CourseTableComponent
             </th>
             <th className="small-cell header-height align-middle dark-gray"
                 align="center">
-              <div className="float-middle">
+              <div>
                 <a className="wbdv-button wbdv-grid-layout wbdv-list-layout">
                   <i className="fa fa-th row-button-spacing"></i>
                 </a>
@@ -36,8 +36,10 @@ export default class CourseTableComponent
             this.props.courses.map(course =>
               <CourseRowComponent
                 deleteCourse={this.props.deleteCourse}
+                selectCourse={this.props.selectCourse}
                 key={course._id}
-                course={course}/>
+                course={course}
+                selected={this.props.selected}/>
           )}
           </tbody>
         </table>

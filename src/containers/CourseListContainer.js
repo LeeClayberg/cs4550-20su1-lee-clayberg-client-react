@@ -9,7 +9,8 @@ class CourseListContainer
   state = {
     layout: this.props.match.params.layout,
     courses: [],
-    newCourseTitle: 'New Course'
+    newCourseTitle: 'New Course',
+    selected: null
   }
 
   componentDidMount() {
@@ -31,6 +32,11 @@ class CourseListContainer
   setLayout = (layout) => {
     this.props.history.push(`/${layout}/courses`)
   }
+
+
+  selectCourse  = (courseId) => {this.setState({
+    selected: courseId
+  })}
 
   deleteCourse = (courseToDelete) =>
     courseService.deleteCourse(courseToDelete._id)
@@ -54,6 +60,7 @@ class CourseListContainer
           ]
         }
       }))
+
 
   render() {
 
@@ -107,7 +114,9 @@ class CourseListContainer
                       </button>
                       <CourseTableComponent
                           deleteCourse={this.deleteCourse}
-                          courses={this.state.courses}/>
+                          courses={this.state.courses}
+                          selectCourse={this.selectCourse}
+                          selected={this.state.selected}/>
                   </div>
               }
               {
