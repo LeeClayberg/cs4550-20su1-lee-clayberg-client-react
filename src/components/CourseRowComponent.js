@@ -31,7 +31,7 @@ export default class CourseRowComponent extends React.Component {
             onClick={() => this.props.selectCourse(this.state.course._id)}>
             <td className="large-cell align-middle">
                 <div className="form-group row text-truncate">
-                    <div className="col-xs-1 doc-icon">
+                    <div className="col-1 doc-icon">
                         <span className={this.props.selected ? 'selected-white' : ''}>
                             <i className="fa fa-file-text wbdv-row wbdv-icon align-middle"></i>
                         </span>
@@ -46,7 +46,7 @@ export default class CourseRowComponent extends React.Component {
                     }
                     {
                         this.state.editing &&
-                        <div className="col-xs-11">
+                        <div className="col-11">
                             <input
                                 className="form-control align-middle"
                                 onChange={(event) => this.updateCourseTitle(event.target.value)}
