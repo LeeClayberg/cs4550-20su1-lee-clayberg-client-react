@@ -93,29 +93,6 @@ class CourseListContainer
               </nav>
 
               <table className="table">
-                  <thead>
-                  <tr>
-                      <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">Title</th>
-                      <th className="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
-                          Owned by
-                          <i className="fa fa-caret-down drop-down-arrow"></i>
-                      </th>
-                      <th className="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray wbdv-header wbdv-last-modified">
-                          Last modified by me
-                      </th>
-                      <th className="small-cell header-height align-middle dark-gray"
-                          align="center">
-                          <div className="d-none d-md-block">
-                              <a className="wbdv-button wbdv-grid-layout wbdv-list-layout">
-                                  <i className="fa fa-th header-icon"></i>
-                              </a>
-                              <a className="wbdv-header wbdv-sort">
-                                  <i className="fa fa-sort-alpha-asc header-icon"></i>
-                              </a>
-                          </div>
-                      </th>
-                  </tr>
-                  </thead>
                   <tbody>
                   <tr className="wbdv-row wbdv-course">
                       <td className="large-cell align-middle text-truncate">
@@ -259,33 +236,33 @@ class CourseListContainer
               <button className="wbdv-bottom-right-10px btn btn-danger">
                   <i className="fa fa-plus fa-lg"></i>
               </button>
-          </div>
 
-        <br/>
-        {
-          this.state.layout === 'table' &&
-          <div>
-            <button
-              onClick={() =>
-                this.setLayout('grid')}>
-              Grid
-            </button>
-            <CourseTableComponent
-              deleteCourse={this.deleteCourse}
-              courses={this.state.courses}/>
+              <br/>
+              {
+                  this.state.layout === 'table' &&
+                  <div>
+                      <button
+                          onClick={() =>
+                              this.setLayout('grid')}>
+                          Grid
+                      </button>
+                      <CourseTableComponent
+                          deleteCourse={this.deleteCourse}
+                          courses={this.state.courses}/>
+                  </div>
+              }
+              {
+                  this.state.layout === 'grid' &&
+                  <div>
+                      <button
+                          onClick={() =>
+                              this.setLayout('table')}>
+                          Table
+                      </button>
+                      <CourseGridComponent courses={this.state.courses}/>
+                  </div>
+              }
           </div>
-        }
-        {
-          this.state.layout === 'grid' &&
-          <div>
-            <button
-              onClick={() =>
-                this.setLayout('table')}>
-              Table
-            </button>
-            <CourseGridComponent courses={this.state.courses}/>
-          </div>
-        }
       </div>
     )
   }

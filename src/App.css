@@ -1,1 +1,19 @@
+body {
+  min-width: 490px;
+}
 
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.wbdv-bottom-right-10px {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 30px;
+  background-color: red;
+}
