@@ -61,6 +61,223 @@ class CourseListContainer
 
     return(
       <div>
+          <div className="container">
+              <nav className="navbar fixed-top navbar-dark bg-primary">
+                  <div className="form-inline row">
+                      <div>
+                          <i className="fa fa-bars hamburger wbdv-hamburger"></i>
+                      </div>
+                      <div
+                          className="d-none d-md-block course-manager-style wbdv-label wbdv-course-manager">
+                          Course Manager
+                      </div>
+                      <div className="search-area">
+                          <input
+                              className="search-bar font-italic font-weight-bold wbdv-field wbdv-new-course"
+                              type="text"
+                              placeholder="New Course Title"
+                              title="Username"/>
+                      </div>
+                      <div className="add-button-area">
+                          <button
+                              className="btn btn-danger add-btn-top wbdv-button wbdv-add-course">
+                              <i className="fa fa-plus "></i>
+                          </button>
+                      </div>
+                  </div>
+              </nav>
+
+              <table className="table">
+                  <thead>
+                  <tr>
+                      <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">Title</th>
+                      <th className="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
+                          Owned by
+                          <i className="fa fa-caret-down drop-down-arrow"></i>
+                      </th>
+                      <th className="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray wbdv-header wbdv-last-modified">
+                          Last modified by me
+                      </th>
+                      <th className="small-cell header-height align-middle dark-gray"
+                          align="center">
+                          <div className="d-none d-md-block">
+                              <a className="wbdv-button wbdv-grid-layout wbdv-list-layout">
+                                  <i className="fa fa-th header-icon"></i>
+                              </a>
+                              <a className="wbdv-header wbdv-sort">
+                                  <i className="fa fa-sort-alpha-asc header-icon"></i>
+                              </a>
+                          </div>
+                      </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              CS5500 Software Engineering Graduate
+                          </a>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45
+                          PM
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              CS4550 Software Engineering Undergraduate
+                          </a>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45
+                          PM
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              CS4500 WebDev Undergraduate
+                          </a>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45
+                          PM
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              CS5610 WebDev Graduate
+                          </a>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:45
+                          PM
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              CS5200 Intro to Databases
+                          </a>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">6:44
+                          PM
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <table className="table">
+                  <thead>
+                  <tr>
+                      <th className="d-table-cell large-cell align-bottom dark-gray smaller-header">Yesterday</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              WEBDEV 2 - React
+                          </a>
+                          <i className="fa fa-users shared-icon"></i>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May
+                          4, 2018
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <table className="table">
+                  <thead>
+                  <tr>
+                      <th className="d-table-cell large-cell align-bottom dark-gray smaller-header">Previous
+                          7 days
+                      </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              WEBDEV Syllabus
+                          </a>
+                          <i className="fa fa-users shared-icon"></i>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May
+                          3, 2018
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+
+                  <tr className="wbdv-row wbdv-course">
+                      <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
+                          <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                          <a className="course-link wbdv-row wbdv-title"
+                             href="../course-editor/course-editor.template.client.html">
+                              WEBDEV 1 - JavaScript, Java, SQL
+                          </a>
+                          <i className="fa fa-users shared-icon"></i>
+                      </td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">me</td>
+                      <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">May
+                          3, 2018
+                      </td>
+                      <td className="small-cell align-middle dark-gray">
+                          <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <button className="wbdv-bottom-right-10px btn btn-danger">
+                  <i className="fa fa-plus fa-lg"></i>
+              </button>
+          </div>
+
         <h2>Course List {this.state.courses.length}</h2>
         <input
           onChange={(event) => this.setState({
