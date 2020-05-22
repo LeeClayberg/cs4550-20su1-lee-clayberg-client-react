@@ -94,6 +94,10 @@ tbody {
   padding: 0px 7px
 }
 
+.selected-white {
+  color: white
+}
+
 .row-light-text {
   font-size: 0.9rem;
   color: #999999;
@@ -135,6 +139,10 @@ tbody {
 
 .row {
   width: 100%;
+}
+
+.table-primary, .table-primary>td, .table-primary>th {
+  background-color: #007bff;
 }
 
 .add-button-area {

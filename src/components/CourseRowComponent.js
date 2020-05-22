@@ -27,17 +27,21 @@ export default class CourseRowComponent extends React.Component {
 
   render() {
     return(
-        <tr className={this.props.selected === this.state.course._id ? 'table-primary' : ''}
+        <tr className={this.props.selected ? 'table-primary' : ''}
             onClick={() => this.props.selectCourse(this.state.course._id)}>
             <td className="large-cell align-middle">
                 <div className="form-group row text-truncate">
-                    <div className="col-xs-1">
-                        <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon align-middle"></i>
+                    <div className="col-xs-1 doc-icon">
+                        <span className={this.props.selected ? 'selected-white' : ''}>
+                            <i className="fa fa-file-text wbdv-row wbdv-icon align-middle"></i>
+                        </span>
                     </div>
                     {
                         !this.state.editing &&
                         <Link className="align-middle title-text" to={`/editor/${this.state.course._id}`}>
-                            {this.state.course.title}
+                            <span className={this.props.selected ? 'selected-white' : ''}>
+                                {this.state.course.title}
+                            </span>
                         </Link>
                     }
                     {
@@ -52,14 +56,18 @@ export default class CourseRowComponent extends React.Component {
                 </div>
             </td>
             <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">
-                {this.state.course.owner}
+                <span className={this.props.selected ? 'selected-white' : ''}>
+                    {this.state.course.owner}
+                </span>
             </td>
             <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">
-                {this.state.course.modified}
+                <span className={this.props.selected ? 'selected-white' : ''}>
+                    {this.state.course.modified}
+                </span>
             </td>
-            <td className="small-cell align-middle dark-gray">
+            <td className="small-cell align-middle selected-white">
                 {
-                    !this.state.editing &&
+                    !this.state.editing && this.props.selected &&
                     <div className="float-right">
                         <i className="fa fa-pencil fa-lg row-button-spacing"
                            onClick={() => this.setEditing(true)}/>

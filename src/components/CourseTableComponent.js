@@ -39,7 +39,7 @@ export default class CourseTableComponent
                 selectCourse={this.props.selectCourse}
                 key={course._id}
                 course={course}
-                selected={this.props.selected}/>
+                selected={this.props.selected === course._id}/>
           )}
           </tbody>
         </table>
