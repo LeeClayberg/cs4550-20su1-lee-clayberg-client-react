@@ -196,16 +196,6 @@ class CourseListContainer
                           <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                       </td>
                   </tr>
-                  </tbody>
-              </table>
-
-              <table className="table">
-                  <thead>
-                  <tr>
-                      <th className="d-table-cell large-cell align-bottom dark-gray smaller-header">Yesterday</th>
-                  </tr>
-                  </thead>
-                  <tbody>
                   <tr className="wbdv-row wbdv-course">
                       <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
                           <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
@@ -223,18 +213,6 @@ class CourseListContainer
                           <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
                       </td>
                   </tr>
-                  </tbody>
-              </table>
-
-              <table className="table">
-                  <thead>
-                  <tr>
-                      <th className="d-table-cell large-cell align-bottom dark-gray smaller-header">Previous
-                          7 days
-                      </th>
-                  </tr>
-                  </thead>
-                  <tbody>
                   <tr className="wbdv-row wbdv-course">
                       <td className="large-cell align-middle text-truncate wbdv-row wbdv-title">
                           <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>

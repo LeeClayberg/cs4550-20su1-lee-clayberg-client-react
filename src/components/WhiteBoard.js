@@ -10,8 +10,6 @@ class WhiteBoard extends React.Component {
     return(
       <BrowserRouter>
         <div>
-          <h1>WhiteBoard !!!!</h1>
-
           <Route path="/login" exact={true} component={LoginComponent}/>
 
           {/*TODO: port over registraion, profile components*/}
