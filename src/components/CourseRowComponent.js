@@ -30,10 +30,19 @@ export default class CourseRowComponent extends React.Component {
         <tr className="wbdv-row wbdv-course">
             <td className="large-cell align-middle text-truncate">
                 <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
-                <a className="course-link wbdv-row wbdv-title"
-                   href="../course-editor/course-editor.template.client.html">
-                    {this.state.course.title}
-                </a>
+                {
+                    !this.state.editing &&
+                    <Link to={`/editor/${this.state.course._id}`}>
+                        {this.state.course.title}
+                    </Link>
+                }
+                {
+                    this.state.editing &&
+                    <input
+                        className="form-control"
+                        onChange={(event) => this.updateCourseTitle(event.target.value)}
+                        value={this.state.course.title}/>
+                }
             </td>
             <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">
                 {this.state.course.owner}
@@ -42,7 +51,17 @@ export default class CourseRowComponent extends React.Component {
                 {this.state.course.modified}
             </td>
             <td className="small-cell align-middle dark-gray">
-                <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+                {
+                    !this.state.editing &&
+                    <span className="float-right">
+                        <i className="fa fa-pencil fa-lg"
+                           onClick={() => this.setEditing(true)}>
+                        </i>
+                        <i className="fa fa-trash fa-lg"
+                            onClick={() => this.props.deleteCourse(this.props.course)}>
+                        </i>
+                    </span>
+                }
             </td>
         </tr>
         /*
