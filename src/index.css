@@ -86,10 +86,8 @@ tbody {
   color: #aaaaaa;
 }
 
-.x-button-spacing {
-  padding-right: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+.row-button-spacing {
+  padding: 0px 10px
 }
 
 .row-light-text {

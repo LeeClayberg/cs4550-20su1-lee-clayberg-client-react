@@ -54,10 +54,10 @@ export default class CourseRowComponent extends React.Component {
                 {
                     !this.state.editing &&
                     <span className="float-right">
-                        <i className="fa fa-pencil fa-lg"
+                        <i className="fa fa-pencil fa-lg row-button-spacing"
                            onClick={() => this.setEditing(true)}>
                         </i>
-                        <i className="fa fa-trash fa-lg"
+                        <i className="fa fa-trash fa-lg row-button-spacing"
                             onClick={() => this.props.deleteCourse(this.props.course)}>
                         </i>
                     </span>
