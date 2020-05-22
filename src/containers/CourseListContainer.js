@@ -9,7 +9,7 @@ class CourseListContainer
   state = {
     layout: this.props.match.params.layout,
     courses: [],
-    newCourseTitle: 'New Title ABC'
+    newCourseTitle: 'New Course'
   }
 
   componentDidMount() {
@@ -76,11 +76,16 @@ class CourseListContainer
                               className="search-bar font-italic font-weight-bold wbdv-field wbdv-new-course"
                               type="text"
                               placeholder="New Course Title"
+                              value={this.state.newCourseTitle}
+                              onChange={(event) => this.setState({
+                                  newCourseTitle: event.target.value
+                              })}
                               title="Username"/>
                       </div>
                       <div className="add-button-area">
                           <button
-                              className="btn btn-danger add-btn-top wbdv-button wbdv-add-course">
+                              className="btn btn-danger add-btn-top wbdv-button wbdv-add-course"
+                              onClick={() => this.addCourse(this.state.newCourseTitle)}>
                               <i className="fa fa-plus "></i>
                           </button>
                       </div>
@@ -256,17 +261,6 @@ class CourseListContainer
               </button>
           </div>
 
-        <h2>Course List {this.state.courses.length}</h2>
-        <input
-          onChange={(event) => this.setState({
-            newCourseTitle: event.target.value
-          })}
-          value={this.state.newCourseTitle}
-          placeholder="Course Title"/>
-        <button onClick={
-          () => this.addCourse(this.state.newCourseTitle)}>
-          Add Course
-        </button>
         <br/>
         {
           this.state.layout === 'table' &&
