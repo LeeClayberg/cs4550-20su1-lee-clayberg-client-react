@@ -33,11 +33,12 @@ tbody {
 }
 
 .table, tr {
+  padding: .5rem;
   border-bottom: 2px solid #cecece;
 }
 
 .table td, .table th {
-  padding: .75rem;
+  padding: .5rem;
   vertical-align: top;
   border-top: none;
 }
@@ -53,17 +54,13 @@ tbody {
 }
 
 .small-cell {
-  width: 16.66%;
+  padding: 0px 0px;
+  width: 18%;
   height: 3rem;
 }
 
 .header-height {
   height: 4rem;
-}
-
-.header-icon {
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .last-modified-size {
@@ -94,7 +91,7 @@ tbody {
 }
 
 .row-button-spacing {
-  padding: 0px 10px
+  padding: 0px 7px
 }
 
 .row-light-text {

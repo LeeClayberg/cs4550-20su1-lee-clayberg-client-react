@@ -20,12 +20,12 @@ export default class CourseTableComponent
             </th>
             <th className="small-cell header-height align-middle dark-gray"
                 align="center">
-              <div className="d-none d-md-block">
+              <div className="float-middle">
                 <a className="wbdv-button wbdv-grid-layout wbdv-list-layout">
-                  <i className="fa fa-th header-icon"></i>
+                  <i className="fa fa-th row-button-spacing"></i>
                 </a>
                 <a className="wbdv-header wbdv-sort">
-                  <i className="fa fa-sort-alpha-asc header-icon"></i>
+                  <i className="fa fa-sort-alpha-asc row-button-spacing"></i>
                 </a>
               </div>
             </th>

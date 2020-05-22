@@ -28,16 +28,16 @@ export default class CourseRowComponent extends React.Component {
   render() {
     return(
         <tr className="wbdv-row wbdv-course">
-            <td className="large-cell align-middle text-truncate">
-                <div className="form-group row">
+            <td className="large-cell align-middle">
+                <div className="form-group row text-truncate">
                     <div className="col-xs-1">
                         <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon align-middle"></i>
                     </div>
                     {
                         !this.state.editing &&
-                            <Link className="align-middle title-text" to={`/editor/${this.state.course._id}`}>
-                                {this.state.course.title}
-                            </Link>
+                        <Link className="align-middle title-text" to={`/editor/${this.state.course._id}`}>
+                            {this.state.course.title}
+                        </Link>
                     }
                     {
                         this.state.editing &&
@@ -59,12 +59,12 @@ export default class CourseRowComponent extends React.Component {
             <td className="small-cell align-middle dark-gray">
                 {
                     !this.state.editing &&
-                    <span className="float-right">
+                    <div className="float-right">
                         <i className="fa fa-pencil fa-lg row-button-spacing"
                            onClick={() => this.setEditing(true)}/>
                         <i className="fa fa-trash fa-lg row-button-spacing"
                             onClick={() => this.props.deleteCourse(this.props.course)}/>
-                    </span>
+                    </div>
                 }
                 {
                     this.state.editing &&
@@ -73,48 +73,7 @@ export default class CourseRowComponent extends React.Component {
                 }
             </td>
         </tr>
-        /*
-      <tr className={this.state.editing ? 'table-primary' : ''}>
-        <td>
-          {
-            !this.state.editing &&
-              <Link to={`/editor/${this.state.course._id}`}>
-                {this.state.course.title}
-              </Link>
-          }
-          {
-            this.state.editing &&
-            <input
-              className="form-control"
-              onChange={(event) => this.updateCourseTitle(event.target.value)}
-              value={this.state.course.title}/>
-          }
-        </td>
-        <td>{this.state.course.owner}</td>
-        <td>{this.state.course.modified}</td>
-        <td>
-          {
-            !this.state.editing &&
-            <button
-              className="btn btn-primary"
-              onClick={() => this.setEditing(true)}>
-              Edit
-            </button>
-          }
-          {
-            this.state.editing &&
-            <span>
-              <button onClick={this.ok}>
-                Ok</button>
-              <button
-                className="btn btn-danger"
-                onClick={
-                  () => this.props.deleteCourse(this.props.course)}>
-                Delete</button>
-            </span>
-          }
-        </td>
-      </tr>*/
+
     )
   }
 }
