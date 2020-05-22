@@ -102,7 +102,7 @@ class CourseListContainer
               <button className="wbdv-bottom-right-10px btn btn-danger">
                   <i className="fa fa-plus fa-lg"></i>
               </button>
-              
+
               {
                   this.state.layout === 'table' &&
                   <div>

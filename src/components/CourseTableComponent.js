@@ -10,7 +10,10 @@ export default class CourseTableComponent
         <table className="table">
           <thead>
           <tr>
-            <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">Title</th>
+            <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">
+              Title
+              <i className="fa fa-caret-up drop-down-arrow"></i>
+            </th>
             <th className="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
               Owned by
               <i className="fa fa-caret-down drop-down-arrow"></i>
