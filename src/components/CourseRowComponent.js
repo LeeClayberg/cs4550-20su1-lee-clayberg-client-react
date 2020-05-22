@@ -27,6 +27,25 @@ export default class CourseRowComponent extends React.Component {
 
   render() {
     return(
+        <tr className="wbdv-row wbdv-course">
+            <td className="large-cell align-middle text-truncate">
+                <i className="fa fa-file-text doc-icon wbdv-row wbdv-icon"></i>
+                <a className="course-link wbdv-row wbdv-title"
+                   href="../course-editor/course-editor.template.client.html">
+                    {this.state.course.title}
+                </a>
+            </td>
+            <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">
+                {this.state.course.owner}
+            </td>
+            <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">
+                {this.state.course.modified}
+            </td>
+            <td className="small-cell align-middle dark-gray">
+                <a className="float-right btn x-button-spacing font-weight-bold wbdv-row wbdv-button wbdv-delete">X</a>
+            </td>
+        </tr>
+        /*
       <tr className={this.state.editing ? 'table-primary' : ''}>
         <td>
           {
@@ -67,7 +86,7 @@ export default class CourseRowComponent extends React.Component {
             </span>
           }
         </td>
-      </tr>
+      </tr>*/
     )
   }
 }
