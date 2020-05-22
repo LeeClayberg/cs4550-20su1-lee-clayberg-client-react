@@ -102,21 +102,16 @@ class CourseListContainer
               <button className="wbdv-bottom-right-10px btn btn-danger">
                   <i className="fa fa-plus fa-lg"></i>
               </button>
-
-              <br/>
+              
               {
                   this.state.layout === 'table' &&
                   <div>
-                      <button
-                          onClick={() =>
-                              this.setLayout('grid')}>
-                          Grid
-                      </button>
                       <CourseTableComponent
                           deleteCourse={this.deleteCourse}
                           courses={this.state.courses}
                           selectCourse={this.selectCourse}
-                          selected={this.state.selected}/>
+                          selected={this.state.selected}
+                          setLayout={this.setLayout}/>
                   </div>
               }
               {
