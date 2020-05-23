@@ -17,8 +17,7 @@ export default class CourseGridComponent
                 Owned by me
                 <i className="fa fa-caret-down drop-down-arrow"></i>
               </th>
-              <th className="d-none d-md-table-cell small-cell header-height align-middle last-modified-size
-              dark-gray wbdv-header wbdv-last-modified"/>
+              <th className=""/>
               <th className="small-cell header-height align-middle dark-gray"
                   align="center">
                 <div>
@@ -35,16 +34,24 @@ export default class CourseGridComponent
           </table>
           <div className="card-columns">
             <div className="card">
+              <i className="fa fa-pencil fa-lg wbdv-row wbdv-icon card-pencil float-right"/>
+              <i className="fa fa-trash fa-lg wbdv-row wbdv-icon card-trash float-right"/>
               <img className="card-img-top" src={require('../preview-image.png')} alt="Card image cap"/>
-                <div className="card-body">
-                  <p className="card-text text-truncate card-title">Name of file ahsdklbjfdsjfalsdkfjhalksdfljsf</p>
+              <div className="row card-body no-padding">
+                <div className="col-10 card-text">
+                  <p className="text-truncate card-title">Name of file
+                    ahsdklbjfdsjfalsdkfjhalksdfljsf</p>
                   <div className="align-middle">
-                      <i className="fa fa-file-text wbdv-row wbdv-icon align-middle card-doc-icon"></i>
-                      <span className="card-time align-bottom">
-                        Modified 8:09 AM
-                      </span>
+                    <i className="fa fa-file-text wbdv-row wbdv-icon align-middle card-doc-icon"></i>
+                    <span className="card-time align-bottom">
+                          Modified 8:09 AM
+                        </span>
                   </div>
                 </div>
+                <div className="col-2 no-padding check">
+                  <i className="fa fa-check wbdv-row wbdv-icon align-middle"/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
