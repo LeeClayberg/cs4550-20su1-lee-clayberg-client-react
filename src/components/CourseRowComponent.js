@@ -38,11 +38,11 @@ export default class CourseRowComponent extends React.Component {
                     </div>
                     {
                         !this.state.editing &&
-                        <Link className="align-middle title-text" to={`/editor/${this.state.course._id}`}>
-                            <span className={this.props.selected ? 'selected-white' : ''}>
-                                {this.state.course.title}
-                            </span>
-                        </Link>
+                            <Link className="title-text" to={`/editor/${this.state.course._id}`}>
+                                <span className={this.props.selected ? 'selected-white' : ''}>
+                                    {this.state.course.title}
+                                </span>
+                            </Link>
                     }
                     {
                         this.state.editing &&

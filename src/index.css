@@ -77,7 +77,7 @@ tbody {
 }
 
 .title-text {
-  padding: 5px 0px;
+  padding: 5px 5px;
 }
 
 .smaller-header {
@@ -145,7 +145,8 @@ tbody {
   background-color: #007bff;
 }
 
-.sharp-blue {
+.card-doc-icon {
+  padding-right: 5px;
   color: #007bff;
 }
 
@@ -168,12 +169,17 @@ tbody {
 
 .card-body {
   border-top: #666666;
-  padding: 5px 15px;
+  padding: 10px 15px;
 }
 
 .card-title {
   margin-bottom: 0px;
-  line-height: 13px;
+  line-height: 15px;
+}
+
+.card-time {
+  color: #bdbdbd;
+  font-size: 12px;
 }
 
 @media (min-width: 0px) {
