@@ -176,7 +176,7 @@ tbody {
 
 .card-title {
   margin-bottom: 0px;
-  line-height: 15px;
+  line-height: 20px;
 }
 
 .card-time {
@@ -186,6 +186,10 @@ tbody {
 
 .card-text {
   padding-right: 15px;
+}
+
+.card-input {
+  height: 26px;
 }
 
 .card-pencil {

@@ -42,9 +42,19 @@ export default class CourseRowComponent extends React.Component {
                      alt="Card image cap"/>
                 <div className="row card-body no-padding">
                     <div className="col-10 card-text">
-                        <p className="text-truncate card-title">
-                            {this.state.course.title}
-                        </p>
+                        {
+                            !this.state.editing &&
+                            <p className="text-truncate card-title">
+                                {this.state.course.title}
+                            </p>
+                        }
+                        {
+                            this.state.editing &&
+                            <input
+                                className="form-control card-input align-middle"
+                                onChange={(event) => this.updateCourseTitle(event.target.value)}
+                                value={this.state.course.title}/>
+                        }
                         <div className="align-middle">
                             <i className="fa fa-file-text wbdv-row wbdv-icon align-middle card-doc-icon"></i>
                             <span className="card-time align-bottom">
@@ -55,7 +65,7 @@ export default class CourseRowComponent extends React.Component {
                     <div className="col-2 no-padding check">
                         {
                             this.state.editing &&
-                            <i className="fa fa-check wbdv-row wbdv-icon align-middle"
+                            <i className="fa fa-check wbdv-row wbdv-icon align-top card-doc-icon"
                                onClick={this.ok}/>
                         }
                     </div>
