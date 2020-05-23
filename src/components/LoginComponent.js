@@ -33,15 +33,15 @@ const LoginComponent = () =>
                 <div className="col-sm-10">
                     <Link role="button"
                        className="btn btn-primary btn-block wbdv-button wbdv-login"
-                       to="../profile/profile.template.client.html">Sign in</Link>
+                       to="/profile">Sign in</Link>
                     <div className="row">
                         <div className="col-6">
                             <Link className="wbdv-link wbdv-cancel"
-                               to="../index.html">Cancel</Link>
+                               to="/">Cancel</Link>
                         </div>
                         <div className="col-6">
                             <Link className="float-right wbdv-link wbdv-register"
-                               to="../register/register.template.client.html">Sign up</Link>
+                               to="/register">Sign up</Link>
                         </div>
                     </div>
                 </div>
