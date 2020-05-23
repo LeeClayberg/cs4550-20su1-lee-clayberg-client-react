@@ -33,6 +33,9 @@ export default class CourseGridComponent
             </tr>
             </thead>
           </table>
+          <div className="card-columns">
+
+          </div>
         </div>
     )
   }
