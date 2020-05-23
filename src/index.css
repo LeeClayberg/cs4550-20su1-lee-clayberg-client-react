@@ -228,5 +228,116 @@ tbody {
   padding-top: 5px;
 }
 
+.list-group-item {
+  background-color: #454B4F;
+  color: #cecece;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.list-group-item:first-child {
+  border-radius: 2px;
+}
+
+.list-group-item:last-child {
+  border-radius: 2px;
+}
+
+.nav-link {
+  padding: 9px;
+}
+
+.nav-pills > .nav-link.active {
+  background-color: #373C3F;
+  color: #cecece;
+}
+
+.topic-link {
+  background-color: #888888;
+  color: white;
+  padding: 2px 3px;
+  margin: 10px;
+}
+
+.nav-pills > .topic-link.active {
+  background-color: #373C3F;
+  color: white;
+}
+
+.module-top {
+  background-color: #454B4F;
+  color: white;
+  font-size: 20px;
+  padding: 19px;
+  margin: 0px;
+}
+
+.lesson-top {
+  background-color: #454B4F;
+  color: #cecece;
+  font-size: 18px;
+  padding: 12px 0px;
+  margin: 0px;
+}
+
+.topics {
+  background-color: white;
+  color: white;
+  font-size: 18px;
+  padding: 14px 14px;
+  margin: 0px;
+}
+
+.module-top-x {
+  color: #cecece;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.module-top-hamburger {
+  color: #cecece;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.module-list {
+  background-color: #373C3F;
+  padding: 20px 20px;
+  height: 100%;
+}
+
+.x-button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0.2rem;
+}
+
+.bottom-plus {
+  padding: 10px 10px;
+  color: #cecece;
+}
+
+.top-plus {
+  padding: 13px 20px;
+  color: white;
+}
+
+.topic-plus {
+  background-color: #888888;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  padding-top: 2px;
+  color: white;
+}
+
+.collapsed-lesson {
+  color: #cecece;
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
