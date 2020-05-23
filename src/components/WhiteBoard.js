@@ -3,7 +3,7 @@ import CourseListContainer from "../containers/CourseListContainer";
 import CourseEditorContainer from "../containers/CourseEditorContainer";
 import {BrowserRouter, Route} from "react-router-dom";
 import HomeComponent from "./HomeComponent";
-import LoginComponent from "./LogicComponent";
+import LoginComponent from "./LoginComponent";
 
 class WhiteBoard extends React.Component {
   render() {
