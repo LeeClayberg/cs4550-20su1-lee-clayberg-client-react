@@ -35,14 +35,9 @@ class CourseEditor
                            {this.state.courseTitle}
                         </div>
                         <div className="col-7 d-none d-md-block no-padding lesson-top">
-                            <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
-                                <a className="nav-item nav-link">Build</a>
-                                <a className="nav-item nav-link active">Pages</a>
-                                <a className="nav-item nav-link">Theme</a>
-                                <a className="nav-item nav-link">Store</a>
-                                <a className="nav-item nav-link">Apps</a>
-                                <a className="nav-item nav-link">Settings</a>
-                            </ul>
+                            {
+                                <LessonTabs/>
+                            }
                         </div>
                         <div className="col-2 d-md-none collapsed-lesson">
                             Pages
