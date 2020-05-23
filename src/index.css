@@ -330,7 +330,9 @@ tbody {
 }
 
 .course-title {
-  padding: 8px 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
   font-size: 25px;
 }
 
@@ -344,7 +346,9 @@ tbody {
 }
 
 .collapsed-lesson {
-  color: #cecece;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-size: 20px;
 }
 
 @import "~bootstrap/dist/css/bootstrap.min.css";

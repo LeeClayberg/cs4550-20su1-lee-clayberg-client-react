@@ -9,16 +9,16 @@ const CourseEditor = () => {
     <div className="container">
         <div className="module-top font-weight-bold">
             <div className="row no-padding">
-                <div className="col-1 no-padding">
+                <div className="col-2 col-md-1 no-padding">
                     <a className="wbdv-course-editor wbdv-close align-middle"
                        href="../course-list/course-list.template.client.html">
                         <i className="fa fa-times fa-lg module-top-x"></i>
                     </a>
                 </div>
-                <div className="col-3 text-truncate wbdv-course-title course-title no-padding align-middle">
-                    CS5610 - WebDev
+                <div className="col-7 col-md-3 text-truncate wbdv-course-title course-title no-padding align-middle">
+                    CS5610 - WebDev cgvkjhbkjnm
                 </div>
-                <div className="col-7 no-padding lesson-top">
+                <div className="col-7 d-none d-md-block no-padding lesson-top">
                     <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
                         <a className="nav-item nav-link">Build</a>
                         <a className="nav-item nav-link active">Pages</a>
@@ -28,8 +28,14 @@ const CourseEditor = () => {
                         <a className="nav-item nav-link">Settings</a>
                     </ul>
                 </div>
-                <div className="col-1 no-padding">
+                <div className="col-2 d-md-none collapsed-lesson">
+                    Pages
+                </div>
+                <div className="d-none d-md-block col-md-1 no-padding">
                     <i className="fa fa-plus fa-lg top-plus wbdv-lesson-add-btn float-right"></i>
+                </div>
+                <div className="col-1 d-md-none no-padding">
+                    <i className="fa fa-bars fa-lg top-plus wbdv-lesson-add-btn float-right"></i>
                 </div>
             </div>
         </div>
