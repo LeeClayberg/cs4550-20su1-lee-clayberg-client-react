@@ -117,12 +117,10 @@ class CourseListContainer
               {
                   this.state.layout === 'grid' &&
                   <div>
-                      <button
-                          onClick={() =>
-                              this.setLayout('table')}>
-                          Table
-                      </button>
-                      <CourseGridComponent courses={this.state.courses}/>
+                      <CourseGridComponent
+                          deleteCourse={this.deleteCourse}
+                          courses={this.state.courses}
+                          setLayout={this.setLayout}/>
                   </div>
               }
           </div>

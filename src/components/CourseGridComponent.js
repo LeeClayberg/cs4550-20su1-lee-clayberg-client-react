@@ -24,7 +24,7 @@ export default class CourseGridComponent
                 <div>
                   <i className="fa fa-th-list row-button-spacing"
                      onClick={() =>
-                         this.props.setLayout('grid')}/>
+                         this.props.setLayout('table')}/>
                   <a className="wbdv-header wbdv-sort">
                     <i className="fa fa-sort-alpha-asc row-button-spacing"></i>
                   </a>
