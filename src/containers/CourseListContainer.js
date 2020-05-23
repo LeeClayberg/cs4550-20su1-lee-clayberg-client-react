@@ -23,9 +23,12 @@ class CourseListContainer
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if(prevProps.match.params.layout !== this.props.match.params.layout) {
-      this.setState({
-        layout: this.props.match.params.layout
-      })
+        courseService.findAllCourses()
+          .then(actualArrayOfCourses =>
+            this.setState({
+              layout: this.props.match.params.layout,
+              courses: actualArrayOfCourses
+            }))
     }
   }
 
@@ -63,9 +66,6 @@ class CourseListContainer
 
 
   render() {
-
-    console.log(this.props)
-
     return(
       <div>
           <div className="container">

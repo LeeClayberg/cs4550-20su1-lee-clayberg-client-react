@@ -30,7 +30,7 @@ export default class CourseRowComponent extends React.Component {
         <tr className={this.props.selected ? 'table-primary' : ''}
             onClick={() => this.props.selectCourse(this.state.course._id)}>
             <td className="large-cell align-middle">
-                <div className="form-group row text-truncate">
+                <div className="form-group row">
                     <div className="col-1 doc-icon">
                         <span className={this.props.selected ? 'selected-white' : ''}>
                             <i className="fa fa-file-text wbdv-row wbdv-icon align-middle"></i>
@@ -38,11 +38,15 @@ export default class CourseRowComponent extends React.Component {
                     </div>
                     {
                         !this.state.editing &&
-                            <Link className="title-text" to={`/editor/${this.state.course._id}`}>
-                                <span className={this.props.selected ? 'selected-white' : ''}>
-                                    {this.state.course.title}
-                                </span>
-                            </Link>
+                        <div className={this.props.selected ?
+                                        'col-11 text-truncate title-text selected-white' :
+                                        'col-11 text-truncate title-text sharp-blue'}>
+                                <Link to={`/editor/${this.state.course._id}`}>
+                                    <span className={this.props.selected ? 'selected-white' : ''}>
+                                        {this.state.course.title}
+                                    </span>
+                                </Link>
+                        </div>
                     }
                     {
                         this.state.editing &&

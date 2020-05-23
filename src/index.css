@@ -59,6 +59,12 @@ tbody {
   height: 3rem;
 }
 
+.medium-cell {
+  padding: 0px 0px;
+  width: 27%;
+  height: 3rem;
+}
+
 .header-height {
   height: 4rem;
 }

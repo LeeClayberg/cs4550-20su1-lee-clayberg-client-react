@@ -46,10 +46,14 @@ export default class CourseRowComponent extends React.Component {
                             <div className="col-10 card-text">
                                 {
                                     !this.state.editing &&
-                                    <p className="text-truncate card-title">
-                                        <span className={this.props.selected ? 'selected-white' : ''}>
-                                        {this.state.course.title}
-                                        </span>
+                                    <p className={this.props.selected ?
+                                                  'text-truncate card-title selected-white' :
+                                                  'text-truncate card-title sharp-blue'}>
+                                        <Link to={`/editor/${this.state.course._id}`}>
+                                            <span className={this.props.selected ? 'selected-white' : ''}>
+                                                {this.state.course.title}
+                                            </span>
+                                        </Link>
                                     </p>
                                 }
                                 {

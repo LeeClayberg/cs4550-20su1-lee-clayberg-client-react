@@ -14,12 +14,11 @@ export default class CourseGridComponent
               <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">
                 Recent Documents
               </th>
-              <th className="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
+              <th className="d-none d-md-table-cell medium-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
                 Owned by me
                 <i className="fa fa-caret-down drop-down-arrow"></i>
               </th>
-              <th className=""/>
-              <th className="small-cell header-height align-middle dark-gray"
+              <th className="medium-cell header-height align-middle dark-gray"
                   align="center">
                 <div>
                   <i className="fa fa-th-list row-button-spacing"
