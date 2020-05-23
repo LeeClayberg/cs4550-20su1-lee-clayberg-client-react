@@ -9,14 +9,14 @@ class CourseEditor
     extends React.Component
 {
     state = {
-        course: 'Course'
+        courseTitle: 'Course'
     }
 
     componentDidMount() {
         courseService.findCourseById(this.props.match.params.course)
             .then(course =>
                 this.setState({
-                     course: course.title
+                     courseTitle: course.title
                 }))
     }
 
@@ -27,13 +27,12 @@ class CourseEditor
                 <div className="module-top font-weight-bold">
                     <div className="row no-padding">
                         <div className="col-2 col-md-1 no-padding">
-                            <a className="wbdv-course-editor wbdv-close align-middle"
-                               href="../course-list/course-list.template.client.html">
+                            <Link className="wbdv-course-editor wbdv-close align-middle" to={`/table/courses`}>
                                 <i className="fa fa-times fa-lg module-top-x"></i>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-7 col-md-3 text-truncate wbdv-course-title course-title no-padding align-middle">
-                           {this.state.course}
+                           {this.state.courseTitle}
                         </div>
                         <div className="col-7 d-none d-md-block no-padding lesson-top">
                             <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
