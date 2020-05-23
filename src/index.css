@@ -145,6 +145,14 @@ tbody {
   background-color: #007bff;
 }
 
+.sharp-blue {
+  color: #007bff;
+}
+
+.no-padding {
+  padding: 0px 0px;
+}
+
 .add-button-area {
   padding-left: 1rem;
 }
@@ -156,6 +164,16 @@ tbody {
 
 .drop-down-arrow {
   padding-left: 1rem;
+}
+
+.card-body {
+  border-top: #666666;
+  padding: 5px 15px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+  line-height: 13px;
 }
 
 @media (min-width: 0px) {

@@ -72,7 +72,7 @@ class CourseListContainer
               <nav className="navbar fixed-top navbar-dark bg-primary">
                   <div className="form-inline row">
                       <div>
-                          <i className="fa fa-bars hamburger wbdv-hamburger"></i>
+                          <i className="fa fa-bars fa-lg hamburger wbdv-hamburger"></i>
                       </div>
                       <div
                           className="d-none d-md-block course-manager-style wbdv-label wbdv-course-manager">
@@ -99,10 +99,6 @@ class CourseListContainer
                   </div>
               </nav>
 
-              <button className="wbdv-bottom-right-10px btn btn-danger">
-                  <i className="fa fa-plus fa-lg"></i>
-              </button>
-
               {
                   this.state.layout === 'table' &&
                   <div>
@@ -123,6 +119,10 @@ class CourseListContainer
                           setLayout={this.setLayout}/>
                   </div>
               }
+
+              <button className="wbdv-bottom-right-10px btn btn-danger">
+                  <i className="fa fa-plus fa-lg"></i>
+              </button>
           </div>
       </div>
     )

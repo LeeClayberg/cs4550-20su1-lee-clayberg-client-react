@@ -34,7 +34,17 @@ export default class CourseGridComponent
             </thead>
           </table>
           <div className="card-columns">
-
+            <div className="card">
+              <img className="card-img-top" src={require('../preview-image.png')} alt="Card image cap"/>
+                <div className="card-body">
+                  <p className="card-text text-truncate card-title">Name of file ahsdklbjfdsjfalsdkfjhalksdfljsf</p>
+                  <div className="">
+                    <div className="col-1 no-padding">
+                      <i className="fa fa-file-text wbdv-row wbdv-icon align-middle sharp-blue"></i>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
     )
