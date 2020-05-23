@@ -16,8 +16,6 @@ class WhiteBoard extends React.Component {
           <Route path="/register" exact={true} component={RegistrationComponent}/>
           <Route path="/profile" exact={true} component={ProfileComponent}/>
 
-          {/*TODO: port over registraion, profile components*/}
-
           <Route
             path='/'
             exact={true}
