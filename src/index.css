@@ -147,7 +147,6 @@ tbody {
 
 .card-doc-icon {
   padding-right: 5px;
-  color: #007bff;
 }
 
 .no-padding {
@@ -208,6 +207,14 @@ tbody {
   top: 10px;
   right: 10px;
   font-size: 20px;
+}
+
+.card-selected {
+  background-color: #007bff;
+}
+
+.sharp-blue {
+  color: #007bff;
 }
 
 .check {

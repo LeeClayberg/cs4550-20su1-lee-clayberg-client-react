@@ -116,6 +116,8 @@ class CourseListContainer
                       <CourseGridComponent
                           deleteCourse={this.deleteCourse}
                           courses={this.state.courses}
+                          selectCourse={this.selectCourse}
+                          selected={this.state.selected}
                           setLayout={this.setLayout}/>
                   </div>
               }

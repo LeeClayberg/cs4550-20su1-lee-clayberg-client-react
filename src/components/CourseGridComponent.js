@@ -1,5 +1,6 @@
 import React from "react";
 import CourseCardComponent from "./CourseCardComponent";
+import CourseRowComponent from "./CourseRowComponent";
 
 export default class CourseGridComponent
   extends React.Component
@@ -37,8 +38,10 @@ export default class CourseGridComponent
               this.props.courses.map(course =>
                 <CourseCardComponent
                     deleteCourse={this.props.deleteCourse}
+                    selectCourse={this.props.selectCourse}
                     key={course._id}
-                    course={course}/>
+                    course={course}
+                    selected={this.props.selected === course._id}/>
               )}
             </div>
         </div>
