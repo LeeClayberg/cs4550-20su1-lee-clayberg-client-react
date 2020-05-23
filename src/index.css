@@ -352,5 +352,13 @@ tbody {
   font-size: 20px;
 }
 
+.home-title {
+  font-size: 40px;
+}
+
+.home-links {
+  font-size: 28px;
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
