@@ -27,6 +27,9 @@ export default class CourseGridComponent
                   <a className="wbdv-header wbdv-sort">
                     <i className="fa fa-sort-alpha-asc row-button-spacing"></i>
                   </a>
+                  <a className="wbdv-header wbdv-folder">
+                    <i className="fa fa-folder row-button-spacing"></i>
+                  </a>
                 </div>
               </th>
             </tr>
