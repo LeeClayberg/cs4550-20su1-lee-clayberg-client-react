@@ -29,8 +29,15 @@ export default class CourseRowComponent extends React.Component {
         return (
             <div className="col mb-4">
             <div className="card">
-                <i className="fa fa-pencil fa-lg wbdv-row wbdv-icon card-pencil float-right"/>
-                <i className="fa fa-trash fa-lg wbdv-row wbdv-icon card-trash float-right"/>
+                {
+                    !this.state.editing &&
+                    <span>
+                        <i className="fa fa-pencil fa-lg wbdv-row wbdv-icon card-pencil float-right"
+                           onClick={() => this.setEditing(true)}/>
+                        <i className="fa fa-trash fa-lg wbdv-row wbdv-icon card-trash float-right"
+                           onClick={() => this.props.deleteCourse(this.props.course)}/>
+                    </span>
+                }
                 <img className="card-img-top" src={require('../preview-image.png')}
                      alt="Card image cap"/>
                 <div className="row card-body no-padding">
@@ -46,7 +53,11 @@ export default class CourseRowComponent extends React.Component {
                         </div>
                     </div>
                     <div className="col-2 no-padding check">
-                        <i className="fa fa-check wbdv-row wbdv-icon align-middle"/>
+                        {
+                            this.state.editing &&
+                            <i className="fa fa-check wbdv-row wbdv-icon align-middle"
+                               onClick={this.ok}/>
+                        }
                     </div>
                 </div>
             </div>
