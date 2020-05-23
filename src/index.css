@@ -262,7 +262,7 @@ tbody {
 .topic-link {
   background-color: #888888;
   color: white;
-  padding: 2px 3px;
+  padding: 2px 0px;
   margin: 10px;
 }
 
@@ -293,6 +293,7 @@ tbody {
   font-size: 18px;
   padding: 14px 14px;
   margin: 0px;
+  height: 100%;
 }
 
 .module-top-x {
