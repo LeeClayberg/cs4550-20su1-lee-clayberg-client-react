@@ -1,6 +1,6 @@
 import React from 'react'
 import CourseListContainer from "../containers/CourseListContainer";
-import CourseEditorContainer from "./CourseEditorContainer";
+import CourseEditorContainer from "../containers/CourseEditorContainer";
 import {BrowserRouter, Route} from "react-router-dom";
 import HomeComponent from "./HomeComponent";
 import LoginComponent from "./LogicComponent";
@@ -34,6 +34,11 @@ class WhiteBoard extends React.Component {
             path='/editor/:course'
             exact={true}
             component={CourseEditorContainer}/>
+
+          <Route
+              path='/editor'
+              exact={true}
+              component={CourseEditorContainer}/>
 
         </div>
       </BrowserRouter>
