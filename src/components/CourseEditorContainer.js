@@ -1,11 +1,12 @@
 import React from "react";
 import ModuleList from "./ModuleList";
 import LessonTabs from "./LessonTabs";
+import TopicPills from "./TopicPills";
 import {Link} from "react-router-dom";
 import courseService from "../services/CourseService"
 
 // stateless component
-class CourseEditor
+class CourseEditorContainer
     extends React.Component
 {
     state = {
@@ -55,18 +56,9 @@ class CourseEditor
                         <ModuleList/>
                     }
                     <div className="col-md-8 no-padding">
-                        <div className="topics">
-                            <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
-                                <a className="nav-item topic-link wbdv-topic-pill">Topic 1</a>
-                                <a className="nav-item topic-link active wbdv-topic-pill">Topic
-                                    2</a>
-                                <a className="nav-item topic-link wbdv-topic-pill">Topic 3</a>
-                                <a className="nav-item topic-link wbdv-topic-pill">Topic 4</a>
-                                <a className="topic-plus align-middle" align="center">
-                                    <i className="fa fa-plus fa-sm wbdv-topic-add-btn"></i>
-                                </a>
-                            </ul>
-                        </div>
+                        {
+                            <TopicPills/>
+                        }
                     </div>
                 </div>
             </div>
@@ -74,4 +66,4 @@ class CourseEditor
     }
 }
 
-export default CourseEditor
+export default CourseEditorContainer
