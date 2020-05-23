@@ -159,6 +159,10 @@ tbody {
   padding: 0px 0px;
 }
 
+.no-margin {
+  margin: 0px;
+}
+
 .add-button-area {
   padding-left: 1rem;
 }
@@ -246,7 +250,8 @@ tbody {
 }
 
 .nav-link {
-  padding: 9px;
+  padding: 9px 22px;
+  font-size: 22px;
 }
 
 .nav-pills > .nav-link.active {
@@ -269,16 +274,16 @@ tbody {
 .module-top {
   background-color: #454B4F;
   color: white;
-  font-size: 20px;
-  padding: 19px;
+  font-size: 22px;
+  padding: 15px;
   margin: 0px;
 }
 
 .lesson-top {
   background-color: #454B4F;
   color: #cecece;
-  font-size: 18px;
-  padding: 12px 0px;
+  font-size: 20px;
+  padding: 0px 0px;
   margin: 0px;
 }
 
@@ -292,9 +297,7 @@ tbody {
 
 .module-top-x {
   color: #cecece;
-  padding: 0px;
-  margin-left: 10px;
-  margin-right: 20px;
+  padding: 15px 25px;
 }
 
 .module-top-hamburger {
@@ -322,8 +325,13 @@ tbody {
 }
 
 .top-plus {
-  padding: 13px 20px;
+  padding: 15px 10px;
   color: white;
+}
+
+.course-title {
+  padding: 8px 0px;
+  font-size: 25px;
 }
 
 .topic-plus {

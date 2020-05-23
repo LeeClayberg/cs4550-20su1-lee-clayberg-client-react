@@ -7,25 +7,34 @@ import {Link} from "react-router-dom";
 const CourseEditor = () => {
   return(
     <div className="container">
-        <div className="row">
-            <div className="col-md-4 no-padding module-column">
-                <div className="module-top font-weight-bold">
-                    <div className="row">
-                        <div className="col-2">
-                            <a className="wbdv-course-editor wbdv-close"
-                               href="../course-list/course-list.template.client.html">
-                                <i className="fa fa-times module-top-x"></i>
-                            </a>
-                        </div>
-                        <div className="col-6 col-md-10 text-truncate wbdv-course-title">
-                            CS5610 - WebDev
-                        </div>
-                        <div className="col-4 d-md-none collapsed-lesson" align="right">
-                            Pages
-                            <i className="fa fa-bars fa-lg module-top-hamburger"></i>
-                        </div>
-                    </div>
+        <div className="module-top font-weight-bold">
+            <div className="row no-padding">
+                <div className="col-1 no-padding">
+                    <a className="wbdv-course-editor wbdv-close align-middle"
+                       href="../course-list/course-list.template.client.html">
+                        <i className="fa fa-times fa-lg module-top-x"></i>
+                    </a>
                 </div>
+                <div className="col-3 text-truncate wbdv-course-title course-title no-padding align-middle">
+                    CS5610 - WebDev
+                </div>
+                <div className="col-7 no-padding lesson-top">
+                    <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
+                        <a className="nav-item nav-link">Build</a>
+                        <a className="nav-item nav-link active">Pages</a>
+                        <a className="nav-item nav-link">Theme</a>
+                        <a className="nav-item nav-link">Store</a>
+                        <a className="nav-item nav-link">Apps</a>
+                        <a className="nav-item nav-link">Settings</a>
+                    </ul>
+                </div>
+                <div className="col-1 no-padding">
+                    <i className="fa fa-plus fa-lg top-plus wbdv-lesson-add-btn float-right"></i>
+                </div>
+            </div>
+        </div>
+        <div className="row no-margin">
+            <div className="col-md-4 no-padding">
                 <div className="module-list">
                     <ul className="list-group wbdv-module-list">
                         <li className="d-none d-md-block list-group-item align-middle wbdv-module-item">
@@ -80,17 +89,6 @@ const CourseEditor = () => {
                 </div>
             </div>
             <div className="col-md-8 no-padding">
-                <div className="d-none d-md-block lesson-top">
-                    <ul className="nav nav-pills nav-fill wbdv-lesson-tabs">
-                        <a className="nav-item nav-link">Build</a>
-                        <a className="nav-item nav-link active">Pages</a>
-                        <a className="nav-item nav-link">Theme</a>
-                        <a className="nav-item nav-link">Store</a>
-                        <a className="nav-item nav-link">Apps</a>
-                        <a className="nav-item nav-link">Settings</a>
-                        <i className="fa fa-plus fa-lg top-plus wbdv-lesson-add-btn"></i>
-                    </ul>
-                </div>
                 <div className="topics">
                     <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
                         <a className="nav-item topic-link wbdv-topic-pill">Topic 1</a>
