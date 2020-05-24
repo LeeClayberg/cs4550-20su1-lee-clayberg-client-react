@@ -1,7 +1,7 @@
 import React from "react";
-import ModuleList from "../components/ModuleList";
-import LessonTabs from "../components/LessonTabs";
-import TopicPills from "../components/TopicPills";
+import ModuleListComponent from "../components/ModuleList";
+import LessonTabsComponent from "../components/LessonTabs";
+import TopicPillsComponent from "../components/TopicPills";
 import {Link} from "react-router-dom";
 import courseService from "../services/CourseService"
 
@@ -37,7 +37,7 @@ class CourseEditorContainer
                         </div>
                         <div className="col-7 d-none d-md-block no-padding lesson-top">
                             {
-                                <LessonTabs/>
+                                <LessonTabsComponent/>
                             }
                         </div>
                         <div className="col-2 d-md-none collapsed-lesson">
@@ -53,11 +53,11 @@ class CourseEditorContainer
                 </div>
                 <div className="row no-margin">
                     {
-                        <ModuleList/>
+                        <ModuleListComponent/>
                     }
                     <div className="col-md-8 no-padding">
                         {
-                            <TopicPills/>
+                            <TopicPillsComponent/>
                         }
                     </div>
                 </div>

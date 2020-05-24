@@ -1,6 +1,6 @@
 import React from "react";
 
-const LessonTabs = () =>
+const LessonTabsComponent = () =>
     <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
         <a className="nav-item nav-link">Build</a>
         <a className="nav-item nav-link active">Pages</a>
@@ -10,4 +10,4 @@ const LessonTabs = () =>
         <a className="nav-item nav-link">Settings</a>
     </ul>
 
-export default LessonTabs
+export default LessonTabsComponent

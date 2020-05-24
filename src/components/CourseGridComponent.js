@@ -1,6 +1,5 @@
 import React from "react";
 import CourseCardComponent from "./CourseCardComponent";
-import CourseRowComponent from "./CourseRowComponent";
 
 export default class CourseGridComponent
   extends React.Component

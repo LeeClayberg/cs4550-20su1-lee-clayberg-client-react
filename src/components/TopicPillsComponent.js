@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopicPills = () =>
+const TopicPillsComponent = () =>
     <div className="topics">
         <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
             <a className="nav-item topic-link wbdv-topic-pill">Topic 1</a>
@@ -13,4 +13,4 @@ const TopicPills = () =>
         </ul>
     </div>
 
-export default TopicPills
+export default TopicPillsComponent

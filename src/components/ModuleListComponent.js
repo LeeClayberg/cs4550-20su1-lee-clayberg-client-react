@@ -1,6 +1,6 @@
 import React from "react";
 
-const ModuleList = () =>
+const ModuleListComponent = () =>
     <div className="col-md-4 no-padding">
         <div className="module-list">
             <ul className="list-group wbdv-module-list">
@@ -56,4 +56,4 @@ const ModuleList = () =>
         </div>
     </div>
 
-export default ModuleList
+export default ModuleListComponent

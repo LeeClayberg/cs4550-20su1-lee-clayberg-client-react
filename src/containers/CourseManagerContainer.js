@@ -3,7 +3,7 @@ import CourseTableComponent from "../components/CourseTableComponent";
 import CourseGridComponent from "../components/CourseGridComponent";
 import courseService from "../services/CourseService"
 
-class CourseListContainer
+class CourseManagerContainer
   extends React.Component
 {
   state = {
@@ -131,4 +131,4 @@ class CourseListContainer
   }
 }
 
-export default CourseListContainer
+export default CourseManagerContainer
