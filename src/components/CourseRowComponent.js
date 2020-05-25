@@ -26,8 +26,8 @@ export default class CourseRowComponent extends React.Component {
           course: this.state.unsaved_changes
       })
       courseService.updateCourse(
-          this.state.course._id,
-          this.state.course)
+          this.state.unsaved_changes._id,
+          this.state.unsaved_changes)
           .then(status => this.setEditing(false))
   }
 
