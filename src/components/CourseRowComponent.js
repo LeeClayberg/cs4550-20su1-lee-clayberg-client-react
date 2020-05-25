@@ -5,22 +5,36 @@ import courseService from '../services/CourseService'
 export default class CourseRowComponent extends React.Component {
   state = {
     editing: false,
+    unsaved_changes: this.props.course,
     course: this.props.course
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+      if(prevProps.selected && !this.props.selected) {
+          this.setState({
+              editing: false,
+              unsaved_changes: this.state.course
+          })
+      }
   }
 
   setEditing = (editing) =>
     this.setState({editing: editing})
 
-  ok = () =>
-    courseService.updateCourse(
-      this.state.course._id,
-      this.state.course)
-      .then(status => this.setEditing(false))
+  ok = () => {
+      this.setState({
+          course: this.state.unsaved_changes
+      })
+      courseService.updateCourse(
+          this.state.course._id,
+          this.state.course)
+          .then(status => this.setEditing(false))
+  }
 
   updateCourseTitle = (newTitle) =>
     this.setState(prevState => ({
-      course: {
-        ...prevState.course,
+        unsaved_changes: {
+        ...prevState.unsaved_changes,
         title: newTitle
       }
     }))
@@ -49,12 +63,12 @@ export default class CourseRowComponent extends React.Component {
                         </div>
                     }
                     {
-                        this.state.editing &&
+                        this.state.editing && this.props.selected &&
                         <div className="col-11">
                             <input
                                 className="form-control align-middle"
                                 onChange={(event) => this.updateCourseTitle(event.target.value)}
-                                value={this.state.course.title}/>
+                                value={this.state.unsaved_changes.title}/>
                         </div>
                     }
                 </div>

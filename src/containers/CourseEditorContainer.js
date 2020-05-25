@@ -1,7 +1,7 @@
 import React from "react";
-import ModuleListComponent from "../components/ModuleList";
-import LessonTabsComponent from "../components/LessonTabs";
-import TopicPillsComponent from "../components/TopicPills";
+import ModuleListComponent from "../components/ModuleListComponent";
+import LessonTabsComponent from "../components/LessonTabsComponent";
+import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
 import courseService from "../services/CourseService"
 
