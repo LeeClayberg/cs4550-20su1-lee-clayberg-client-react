@@ -27,15 +27,6 @@ tbody {
   margin: 10px 0px;
 }
 
-.course-link {
-  color: #000000;
-}
-
-.course-link:hover {
-  color: #007bff;
-  text-decoration: none;
-}
-
 .table, tr {
   padding: .5rem;
   border-bottom: 2px solid #cecece;
@@ -52,73 +43,73 @@ tbody {
   color: #ffffff;
 }
 
-.large-cell {
+.wbdv-large-cell {
   height: 3rem;
   max-width: 350px;
 }
 
-.small-cell {
+.wbdv-small-cell {
   padding: 0px 0px;
   width: 18%;
   height: 3rem;
 }
 
-.medium-cell {
+.wbdv-medium-cell {
   padding: 0px 0px;
   width: 27%;
   height: 3rem;
 }
 
-.header-height {
+.wbdv-header-height {
   height: 4rem;
 }
 
-.last-modified-size {
+.wbdv-last-modified-size {
   font-size: 0.8rem;
 }
 
-.dark-gray {
+.wbdv-dark-gray {
   color: #666666;
 }
 
-.doc-icon {
+.wbdv-doc-icon {
   padding: 5px 10px;
   color: #007bff;
 }
 
-.title-text {
+.wbdv-title-text {
   padding: 5px 5px;
 }
 
-.smaller-header {
+.wbdv-smaller-header {
   font-size: 0.9rem;
 }
 
-.shared-icon {
+.wbdv-shared-icon {
   padding-left: 1rem;
   padding-right: 1rem;
   color: #aaaaaa;
 }
 
-.row-button-spacing {
+.wbdv-row-button-spacing {
   padding: 0px 7px
 }
 
-.selected-white {
+.wbdv-selected-white {
   color: white
 }
 
-.row-light-text {
+.wbdv-row-light-text {
   font-size: 0.9rem;
   color: #999999;
 }
 
-.hamburger {
+.wbdv-hamburger {
   padding-left: 20px;
   padding-right: 15px;
 }
 
-.course-manager-style {
+.wbdv-course-manager-style {
   display: block;
   color: white;
   font-size: 1.4rem;
@@ -149,35 +140,40 @@ tbody {
 
 .row {
   width: 100%;
+  margin-left: 0px;
 }
 
 .table-primary, .table-primary>td, .table-primary>th {
   background-color: #007bff;
 }
 
-.card-doc-icon {
+.wbdv-card-doc-icon {
   padding-right: 5px;
 }
 
-.no-padding {
+.wbdv-no-padding {
   padding: 0px 0px;
 }
 
-.no-margin {
+.wbdv-no-margin {
   margin: 0px;
 }
 
-.add-button-area {
+.wbdv-add-button-area {
   padding-left: 1rem;
 }
 
-.add-btn-top {
+.wbdv-add-btn-top {
   background-color: red;
   border-radius: 1.5rem;
 }
 
-.drop-down-arrow {
+.wbdv-drop-down-arrow {
   padding-left: 1rem;
+}
+
+.card-img-top {
+  border-radius: 0px;
 }
 
 .card-body {
@@ -192,20 +188,20 @@ tbody {
   line-height: 20px;
 }
 
-.card-time {
+.wbdv-card-time {
   color: #bdbdbd;
   font-size: 12px;
 }
 
-.card-text {
+.wbdv-card-text {
   padding-right: 15px;
 }
 
-.card-input {
+.wbdv-card-input {
   height: 26px;
 }
 
-.card-pencil {
+.wbdv-card-pencil {
   color: #007bff;
   background-color: #ffffff;
   position: absolute;
@@ -214,7 +210,7 @@ tbody {
   font-size: 20px;
 }
 
-.card-trash {
+.wbdv-card-trash {
   color: #007bff;
   background-color: #ffffff;
   position: absolute;
@@ -227,11 +223,11 @@ tbody {
   background-color: #007bff;
 }
 
-.sharp-blue {
+.wbdv-sharp-blue {
   color: #007bff;
 }
 
-.check {
+.wbdv-check {
   color: #acacac;
   padding-top: 5px;
 }
@@ -275,7 +271,7 @@ tbody {
   color: white;
 }
 
-.module-top {
+.wbdv-module-top {
   background-color: #454B4F;
   color: white;
   font-size: 22px;
@@ -283,7 +279,7 @@ tbody {
   margin: 0px;
 }
 
-.lesson-top {
+.wbdv-lesson-top {
   background-color: #454B4F;
   color: #cecece;
   font-size: 20px;
@@ -291,7 +287,7 @@ tbody {
   margin: 0px;
 }
 
-.topics {
+.wbdv-topics {
   background-color: white;
   color: white;
   font-size: 18px;
@@ -300,48 +296,48 @@ tbody {
   height: 100%;
 }
 
-.module-top-x {
+.wbdv-module-top-x {
   color: #cecece;
   padding: 15px 25px;
 }
 
-.module-top-hamburger {
+.wbdv-module-top-hamburger {
   color: #cecece;
   padding: 0px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.module-list {
+.wbdv-module-list {
   background-color: #373C3F;
   padding: 20px 20px;
   height: 100%;
 }
 
-.x-button {
+.wbdv-x-button {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-right: 0.2rem;
 }
 
-.bottom-plus {
+.wbdv-bottom-plus {
   padding: 10px 10px;
   color: #cecece;
 }
 
-.top-plus {
+.wbdv-top-plus {
   padding: 15px 10px;
   color: white;
 }
 
-.course-title {
+.wbdv-course-title {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 8px;
   font-size: 25px;
 }
 
-.topic-plus {
+.wbdv-topic-plus {
   background-color: #888888;
   width: 30px;
   height: 30px;
@@ -350,17 +346,17 @@ tbody {
   color: white;
 }
 
-.collapsed-lesson {
+.wbdv-collapsed-lesson {
   padding-top: 10px;
   padding-bottom: 8px;
   font-size: 20px;
 }
 
-.home-title {
+.wbdv-home-title {
   font-size: 40px;
 }
 
-.home-links {
+.wbdv-home-links {
   font-size: 28px;
 }
 

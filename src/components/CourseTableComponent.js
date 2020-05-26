@@ -10,25 +10,25 @@ export default class CourseTableComponent
         <table className="table">
           <thead>
           <tr>
-            <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">
+            <th className="d-table-cell wbdv-large-cell wbdv-header-height align-middle wbdv-dark-gray wbdv-header wbdv-title">
               Title
-              <i className="fa fa-caret-up drop-down-arrow"></i>
+              <i className="fa fa-caret-up wbdv-drop-down-arrow"></i>
             </th>
-            <th className="d-none d-md-table-cell small-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
+            <th className="d-none d-md-table-cell wbdv-small-cell wbdv-header-height align-middle wbdv-dark-gray wbdv-header wbdv-owner">
               Owned by
-              <i className="fa fa-caret-down drop-down-arrow"></i>
+              <i className="fa fa-caret-down wbdv-drop-down-arrow"></i>
             </th>
-            <th className="d-none d-md-table-cell small-cell header-height align-middle last-modified-size dark-gray wbdv-header wbdv-last-modified">
+            <th className="d-none d-md-table-cell wbdv-small-cell wbdv-header-height align-middle wbdv-last-modified-size wbdv-dark-gray wbdv-header wbdv-last-modified">
               Last modified by me
             </th>
-            <th className="small-cell header-height align-middle dark-gray"
+            <th className="wbdv-small-cell wbdv-header-height align-middle wbdv-dark-gray"
                 align="center">
               <div>
-                  <i className="fa fa-th row-button-spacing"
+                  <i className="fa fa-th wbdv-row-button-spacing"
                       onClick={() =>
                           this.props.setLayout('grid')}/>
                 <a className="wbdv-header wbdv-sort">
-                  <i className="fa fa-sort-alpha-asc row-button-spacing"></i>
+                  <i className="fa fa-sort-alpha-asc wbdv-row-button-spacing"></i>
                 </a>
               </div>
             </th>

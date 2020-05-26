@@ -3,30 +3,30 @@ import {Link} from "react-router-dom";
 
 const HomeComponent = () =>
   <div className="container">
-    <h2 className="home-title">Home</h2>
+    <h2 className="wbdv-home-title">Home</h2>
     <div>
       <div>
-        <Link className="home-links" to='/editor'>
+        <Link className="wbdv-home-links" to='/editor'>
           Course Editor
         </Link>
       </div>
       <div>
-        <Link className="home-links" to='/table/courses'>
+        <Link className="wbdv-home-links" to='/table/courses'>
           Course List
         </Link>
       </div>
       <div>
-        <Link className="home-links" to='/login'>
+        <Link className="wbdv-home-links" to='/login'>
           Login
         </Link>
       </div>
       <div>
-        <Link className="home-links" to='/register'>
+        <Link className="wbdv-home-links" to='/register'>
           Registration
         </Link>
       </div>
       <div>
-        <Link className="home-links" to='/profile'>
+        <Link className="wbdv-home-links" to='/profile'>
           Profile
         </Link>
       </div>

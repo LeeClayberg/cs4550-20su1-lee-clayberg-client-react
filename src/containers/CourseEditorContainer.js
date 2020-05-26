@@ -25,37 +25,37 @@ class CourseEditorContainer
         console.log(this.state.course)
         return (
             <div className="container">
-                <div className="module-top font-weight-bold">
-                    <div className="row no-padding">
-                        <div className="col-2 col-md-1 no-padding">
+                <div className="wbdv-module-top font-weight-bold">
+                    <div className="row wbdv-no-padding">
+                        <div className="col-2 col-md-1 wbdv-no-padding">
                             <Link className="wbdv-course-editor wbdv-close align-middle" to={`/table/courses`}>
-                                <i className="fa fa-times fa-lg module-top-x"></i>
+                                <i className="fa fa-times fa-lg wbdv-module-top-x"></i>
                             </Link>
                         </div>
-                        <div className="col-7 col-md-3 text-truncate wbdv-course-title course-title no-padding align-middle">
+                        <div className="col-7 col-md-3 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
                            {this.state.courseTitle}
                         </div>
-                        <div className="col-7 d-none d-md-block no-padding lesson-top">
+                        <div className="col-7 d-none d-md-block wbdv-no-padding wbdv-lesson-top">
                             {
                                 <LessonTabsComponent/>
                             }
                         </div>
-                        <div className="col-2 d-md-none collapsed-lesson">
+                        <div className="col-2 d-md-none wbdv-collapsed-lesson">
                             Pages
                         </div>
-                        <div className="d-none d-md-block col-md-1 no-padding">
-                            <i className="fa fa-plus fa-lg top-plus wbdv-lesson-add-btn float-right"></i>
+                        <div className="d-none d-md-block col-md-1 wbdv-no-padding">
+                            <i className="fa fa-plus fa-lg wbdv-top-plus wbdv-lesson-add-btn float-right"></i>
                         </div>
-                        <div className="col-1 d-md-none no-padding">
-                            <i className="fa fa-bars fa-lg top-plus wbdv-lesson-add-btn float-right"></i>
+                        <div className="col-1 d-md-none wbdv-no-padding">
+                            <i className="fa fa-bars fa-lg wbdv-top-plus wbdv-lesson-add-btn float-right"></i>
                         </div>
                     </div>
                 </div>
-                <div className="row no-margin">
+                <div className="row wbdv-no-margin">
                     {
                         <ModuleListComponent/>
                     }
-                    <div className="col-md-8 no-padding">
+                    <div className="col-md-8 wbdv-no-padding">
                         {
                             <TopicPillsComponent/>
                         }

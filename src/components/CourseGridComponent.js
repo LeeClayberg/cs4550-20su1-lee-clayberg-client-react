@@ -10,24 +10,24 @@ export default class CourseGridComponent
           <table className="table">
             <thead>
             <tr>
-              <th className="d-table-cell large-cell header-height align-middle dark-gray wbdv-header wbdv-title">
+              <th className="d-table-cell wbdv-large-cell wbdv-header-height align-middle wbdv-dark-gray wbdv-header wbdv-title">
                 Recent Documents
               </th>
-              <th className="d-none d-md-table-cell medium-cell header-height align-middle dark-gray wbdv-header wbdv-owner">
+              <th className="d-none d-md-table-cell wbdv-medium-cell wbdv-header-height align-middle wbdv-dark-gray wbdv-header wbdv-owner">
                 Owned by me
-                <i className="fa fa-caret-down drop-down-arrow"></i>
+                <i className="fa fa-caret-down wbdv-drop-down-arrow"></i>
               </th>
-              <th className="medium-cell header-height align-middle dark-gray"
+              <th className="wbdv-medium-cell wbdv-header-height align-middle wbdv-dark-gray"
                   align="center">
                 <div>
-                  <i className="fa fa-th-list row-button-spacing"
+                  <i className="fa fa-th-list wbdv-row-button-spacing"
                      onClick={() =>
                          this.props.setLayout('table')}/>
                   <a className="wbdv-header wbdv-sort">
-                    <i className="fa fa-sort-alpha-asc row-button-spacing"></i>
+                    <i className="fa fa-sort-alpha-asc wbdv-row-button-spacing"></i>
                   </a>
                   <a className="wbdv-header wbdv-folder">
-                    <i className="fa fa-folder row-button-spacing"></i>
+                    <i className="fa fa-folder wbdv-row-button-spacing"></i>
                   </a>
                 </div>
               </th>

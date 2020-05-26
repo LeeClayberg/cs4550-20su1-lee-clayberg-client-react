@@ -72,10 +72,10 @@ class CourseManagerContainer
               <nav className="navbar fixed-top navbar-dark bg-primary">
                   <div className="form-inline row">
                       <div>
-                          <i className="fa fa-bars fa-lg hamburger wbdv-hamburger"></i>
+                          <i className="fa fa-bars fa-lg wbdv-hamburger wbdv-hamburger"></i>
                       </div>
                       <div
-                          className="d-none d-md-block course-manager-style wbdv-label wbdv-course-manager">
+                          className="d-none d-md-block wbdv-course-manager-style wbdv-label wbdv-course-manager">
                           Course Manager
                       </div>
                       <div className="search-area">
@@ -89,9 +89,9 @@ class CourseManagerContainer
                               })}
                               title="Username"/>
                       </div>
-                      <div className="add-button-area">
+                      <div className="wbdv-add-button-area">
                           <button
-                              className="btn btn-danger add-btn-top wbdv-button wbdv-add-course"
+                              className="btn btn-danger wbdv-add-btn-top wbdv-button wbdv-add-course"
                               onClick={() => this.addCourse(this.state.newCourseTitle)}>
                               <i className="fa fa-plus "></i>
                           </button>

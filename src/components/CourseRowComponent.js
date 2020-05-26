@@ -43,20 +43,20 @@ export default class CourseRowComponent extends React.Component {
     return(
         <tr className={this.props.selected ? 'table-primary' : ''}
             onClick={() => this.props.selectCourse(this.state.course._id)}>
-            <td className="large-cell align-middle">
+            <td className="wbdv-large-cell align-middle">
                 <div className="form-group row">
-                    <div className="col-1 doc-icon">
-                        <span className={this.props.selected ? 'selected-white' : ''}>
+                    <div className="col-1 wbdv-doc-icon">
+                        <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                             <i className="fa fa-file-text wbdv-row wbdv-icon align-middle"></i>
                         </span>
                     </div>
                     {
                         !this.state.editing &&
                         <div className={this.props.selected ?
-                                        'col-11 text-truncate title-text selected-white' :
-                                        'col-11 text-truncate title-text sharp-blue'}>
+                                        'col-11 text-truncate wbdv-title-text wbdv-selected-white' :
+                                        'col-11 text-truncate wbdv-title-text wbdv-sharp-blue'}>
                                 <Link to={`/editor/${this.state.course._id}`}>
-                                    <span className={this.props.selected ? 'selected-white' : ''}>
+                                    <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                                         {this.state.course.title}
                                     </span>
                                 </Link>
@@ -73,29 +73,29 @@ export default class CourseRowComponent extends React.Component {
                     }
                 </div>
             </td>
-            <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-owner">
-                <span className={this.props.selected ? 'selected-white' : ''}>
+            <td className="d-none d-md-table-cell wbdv-small-cell align-middle wbdv-row-light-text wbdv-row wbdv-owner">
+                <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                     {this.state.course.owner}
                 </span>
             </td>
-            <td className="d-none d-md-table-cell small-cell align-middle row-light-text wbdv-row wbdv-modified-date">
-                <span className={this.props.selected ? 'selected-white' : ''}>
+            <td className="d-none d-md-table-cell wbdv-small-cell align-middle wbdv-row-light-text wbdv-row wbdv-modified-date">
+                <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                     {this.state.course.modified}
                 </span>
             </td>
-            <td className="small-cell align-middle selected-white">
+            <td className="wbdv-small-cell align-middle wbdv-selected-white">
                 {
                     !this.state.editing && this.props.selected &&
                     <div className="float-right">
-                        <i className="fa fa-pencil fa-lg row-button-spacing"
+                        <i className="fa fa-pencil fa-lg wbdv-row-button-spacing"
                            onClick={() => this.setEditing(true)}/>
-                        <i className="fa fa-trash fa-lg row-button-spacing"
+                        <i className="fa fa-trash fa-lg wbdv-row-button-spacing"
                             onClick={() => this.props.deleteCourse(this.props.course)}/>
                     </div>
                 }
                 {
                     this.state.editing &&
-                    <i className="fa fa-check fa-lg row-button-spacing float-right"
+                    <i className="fa fa-check fa-lg wbdv-row-button-spacing float-right"
                         onClick={this.ok}/>
                 }
             </td>

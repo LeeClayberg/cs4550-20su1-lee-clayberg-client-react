@@ -48,23 +48,23 @@ export default class CourseRowComponent extends React.Component {
                         {
                             !this.state.editing && this.props.selected &&
                             <span>
-                                <i className="fa fa-pencil fa-lg wbdv-row wbdv-icon card-pencil float-right"
+                                <i className="fa fa-pencil fa-lg wbdv-row wbdv-icon wbdv-card-pencil float-right"
                                    onClick={() => this.setEditing(true)}/>
-                                <i className="fa fa-trash fa-lg wbdv-row wbdv-icon card-trash float-right"
+                                <i className="fa fa-trash fa-lg wbdv-row wbdv-icon wbdv-card-trash float-right"
                                    onClick={() => this.props.deleteCourse(this.props.course)}/>
                             </span>
                         }
                         <img className="card-img-top" src={require('../preview-image.png')}
                              alt="Card image cap"/>
-                        <div className="row card-body no-padding">
-                            <div className="col-10 card-text">
+                        <div className="row card-body wbdv-no-padding">
+                            <div className="col-10 wbdv-card-text">
                                 {
                                     !this.state.editing &&
                                     <p className={this.props.selected ?
-                                                  'text-truncate card-title selected-white' :
-                                                  'text-truncate card-title sharp-blue'}>
+                                                  'text-truncate card-title wbdv-selected-white' :
+                                                  'text-truncate card-title wbdv-sharp-blue'}>
                                         <Link to={`/editor/${this.state.course._id}`}>
-                                            <span className={this.props.selected ? 'selected-white' : ''}>
+                                            <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                                                 {this.state.course.title}
                                             </span>
                                         </Link>
@@ -73,25 +73,25 @@ export default class CourseRowComponent extends React.Component {
                                 {
                                     this.state.editing && this.props.selected &&
                                     <input
-                                        className="form-control card-input align-middle"
+                                        className="form-control wbdv-card-input align-middle"
                                         onChange={(event) => this.updateCourseTitle(event.target.value)}
                                         value={this.state.unsaved_changes.title}/>
                                 }
                                 <div className="align-middle">
-                                    <span className={this.props.selected ? 'selected-white' : 'sharp-blue'}>
-                                        <i className="fa fa-file-text wbdv-row wbdv-icon align-middle card-doc-icon"></i>
+                                    <span className={this.props.selected ? 'wbdv-selected-white' : 'wbdv-sharp-blue'}>
+                                        <i className="fa fa-file-text wbdv-row wbdv-icon align-middle wbdv-card-doc-icon"></i>
                                     </span>
-                                    <span className="card-time align-bottom">
-                                        <span className={this.props.selected ? 'selected-white' : ''}>
+                                    <span className="wbdv-card-time align-bottom">
+                                        <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
                                             {this.state.course.modified}
                                         </span>
                                     </span>
                                 </div>
                             </div>
-                            <div className="col-2 no-padding check">
+                            <div className="col-2 wbdv-no-padding wbdv-check">
                                 {
                                     this.state.editing &&
-                                    <i className="fa fa-check wbdv-row wbdv-icon align-top selected-white"
+                                    <i className="fa fa-check wbdv-row wbdv-icon align-top wbdv-selected-white"
                                        onClick={this.ok}/>
                                 }
                             </div>
