@@ -32,7 +32,7 @@ class ModuleListComponent extends React.Component {
                                                 }))
                                             }}/>
                                         <i className="btn fa fa-times float-right wbdv-module-button wbdv-module-item-delete-btn"
-                                            onClick={() => this.props.deleteModule(module._id)}/>
+                                           onClick={() => this.props.deleteModule(module._id)}/>
                                         <i className="btn fa fa-check float-right wbdv-module-button wbdv-module-item-save-btn"
                                            onClick={() => {
                                                this.props.updateModule(this.state.editingModule._id, this.state.editingModule)
