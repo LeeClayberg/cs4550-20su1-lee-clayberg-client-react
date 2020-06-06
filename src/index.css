@@ -320,7 +320,12 @@ tbody {
   padding-right: 0.2rem;
 }
 
-.wbdv-bottom-plus {
+.wbdv-bottom-plus  {
+  padding: 10px 10px;
+  color: #cecece;
+}
+
+.wbdv-bottom-plus:hover {
   padding: 10px 10px;
   color: #cecece;
 }

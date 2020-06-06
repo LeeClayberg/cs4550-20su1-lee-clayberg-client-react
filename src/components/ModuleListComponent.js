@@ -18,16 +18,16 @@ class ModuleListComponent extends React.Component {
                     <ul className="list-group">
                         {
                         this.props.modules.map(module =>
-                            <li key={module._id} className="d-none d-md-block list-group-item align-middle wbdv-module-item">
+                            <li key={module._id} className="list-group-item align-middle wbdv-module-item">
                                 <a className="wbdv-module-item-title">
                                     {module.title}
                                 </a>
-                                <a className="d-none d-lg-block float-right btn wbdv-x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
+                                <a className="float-right btn wbdv-x-button font-weight-bold wbdv-module-item-delete-btn">X</a>
                             </li>
                         )}
                     </ul>
                     <div className="align-middle" align="right">
-                        <i className="d-none d-md-block fa fa-plus fa-lg wbdv-bottom-plus wbdv-module-item-add-btn"
+                        <i className="btn fa fa-plus fa-lg wbdv-bottom-plus wbdv-module-item-add-btn"
                            onClick={() => this.props.createModule(
                                this.props.params.courseId,
                                {

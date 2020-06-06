@@ -26,7 +26,7 @@ const updateModule = (moduleId, newModule) =>
     .then(response => response.json())
 
 const createModule = (courseId, module) =>
-  fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/courses/${courseId}/modules`, {
+  fetch(`https://wbdv-generic-server.herokuapp.com/api/001458299/courses/${courseId}/modules`, {
     method: 'POST',
     body: JSON.stringify(module),
     headers: {

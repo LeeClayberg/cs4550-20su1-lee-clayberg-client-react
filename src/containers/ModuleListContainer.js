@@ -1,7 +1,6 @@
 import {connect} from "react-redux";
 import ModuleListComponent from "../components/ModuleListComponent";
 import ModuleService from "../services/ModuleService";
-import moduleReducer from "../reducers/moduleReducer";
 
 const stateToPropertyMapper = (state, ownProps) => {
   return {

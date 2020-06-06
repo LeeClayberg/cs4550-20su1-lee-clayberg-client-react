@@ -2,7 +2,6 @@ import React from "react";
 import LessonTabsComponent from "../components/LessonTabsComponent";
 import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
-import courseService from "../services/CourseService"
 import ModuleListContainer from "./ModuleListContainer";
 
 // stateless component
