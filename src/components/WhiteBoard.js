@@ -33,7 +33,7 @@ class WhiteBoard extends React.Component {
             component={CourseManagerContainer}/>
 
           <Route
-            path='/editor/:course'
+            path='/editor/:courseId'
             exact={true}
             component={CourseEditorContainer}/>
 

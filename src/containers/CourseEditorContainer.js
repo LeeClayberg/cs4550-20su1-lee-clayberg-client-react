@@ -6,23 +6,7 @@ import courseService from "../services/CourseService"
 import ModuleListContainer from "./ModuleListContainer";
 
 // stateless component
-class CourseEditorContainer
-    extends React.Component
-{
-    state = {
-        courseTitle: 'Course'
-    }
-
-    componentDidMount() {
-        courseService.findCourseById(this.props.match.params.course)
-            .then(course =>
-                this.setState({
-                     courseTitle: course.title
-                }))
-    }
-
-    render() {
-        console.log(this.state.course)
+const CourseEditorContainer = ({match}) => {
         return (
             <div className="container">
                 <div className="wbdv-module-top font-weight-bold">
@@ -33,7 +17,7 @@ class CourseEditorContainer
                             </Link>
                         </div>
                         <div className="col-7 col-md-3 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
-                           {this.state.courseTitle}
+                           Course Title
                         </div>
                         <div className="col-7 d-none d-md-block wbdv-no-padding wbdv-lesson-top">
                             {
@@ -53,7 +37,7 @@ class CourseEditorContainer
                 </div>
                 <div className="row wbdv-no-margin">
                     {
-                        <ModuleListContainer/>
+                        <ModuleListContainer {...match}/>
                     }
                     <div className="col-md-8 wbdv-no-padding">
                         {
@@ -62,8 +46,6 @@ class CourseEditorContainer
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+        )}
 
 export default CourseEditorContainer

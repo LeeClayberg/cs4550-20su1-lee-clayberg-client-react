@@ -17,10 +17,6 @@ ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <App/>
-            {/*<ModuleListContainer/>*/}
-            {/*<CounterComponent/>*/}
-            {/*<HelloContainer/>*/}
-            {/*<HelloWorld messageProperty={'Hello World????'}/>*/}
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
