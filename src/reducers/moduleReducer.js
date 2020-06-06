@@ -18,13 +18,6 @@ const moduleReducer = (state=initialState, event) => {
         ...state,
         modules: event.modules
       }
-    case "FIND_ALL_MODULES":
-      console.log(event.modules)
-      return {
-        ...state,
-        modules: event.modules
-      }
-      break
     case "ADD_MODULE":
       return {
         modules: [

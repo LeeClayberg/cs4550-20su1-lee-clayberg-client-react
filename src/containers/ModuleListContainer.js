@@ -20,13 +20,6 @@ const dispatchToPropertyMapper = (dispatch) => {
           modules: modulesForTheCourse
         }))
     },
-    findAllModules: () => {
-      ModuleService.findAllModules()
-        .then(actualModules => dispatch({
-          type: 'FIND_ALL_MODULES',
-          modules: actualModules
-        }))
-    },
     updateModule: (moduleId, newModuleData) => {
       ModuleService.updateModule(moduleId, newModuleData)
         .then(status => dispatch({
