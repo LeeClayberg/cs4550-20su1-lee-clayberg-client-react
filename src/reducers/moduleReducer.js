@@ -1,9 +1,6 @@
-// Finite State Machine
-// (S1) --e1--> (S2)
-// (S1) --e2--> (S3)
 
 const initialState = {
-  newModuleTitle: 'Some Module',
+  newModuleTitle: 'New Module',
   modules: []
 }
 

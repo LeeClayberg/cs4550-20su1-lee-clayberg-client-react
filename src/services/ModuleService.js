@@ -1,22 +1,22 @@
 const findAllModules = () => {
-  return fetch("https://wbdv-generic-server.herokuapp.com/api/jannunzi/modules")
+  return fetch("https://wbdv-generic-server.herokuapp.com/api/001458299/modules")
     .then(response => response.json())
 }
 
 const findModuleForCourse = (courseId) =>
-  fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/courses/${courseId}/modules`)
+  fetch(`https://wbdv-generic-server.herokuapp.com/api/001458299/courses/${courseId}/modules`)
     .then(response => response.json())
 
 
 const deleteModule = (moduleId) => {
-  return fetch("https://wbdv-generic-server.herokuapp.com/api/jannunzi/modules/" + moduleId, {
+  return fetch("https://wbdv-generic-server.herokuapp.com/api/001458299/modules/" + moduleId, {
     method: 'DELETE'
   })
     .then(response => response.json())
 }
 
 const updateModule = (moduleId, newModule) =>
-  fetch(`https://wbdv-generic-server.herokuapp.com/api/jannunzi/modules/${moduleId}`, {
+  fetch(`https://wbdv-generic-server.herokuapp.com/api/001458299/modules/${moduleId}`, {
     method: 'PUT',
     body: JSON.stringify(newModule),
     headers: {
