@@ -4,8 +4,6 @@ import ModuleService from "../services/ModuleService";
 import moduleReducer from "../reducers/moduleReducer";
 
 const stateToPropertyMapper = (state, ownProps) => {
-  console.log(ownProps)
-  console.log(state)
   return {
     modules: state.moduleReducer.modules,
     newModuleTitle: state.moduleReducer.newModuleTitle,

@@ -3,12 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {combineReducers, createStore} from "redux";
+import {Provider} from "react-redux";
+import moduleReducer from "./reducers/moduleReducer";
+import lessonReducer from "./reducers/lessonReducer";
+
+const reducers = combineReducers({
+    moduleReducer, lessonReducer
+})
+const store = createStore(reducers)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+            {/*<ModuleListContainer/>*/}
+            {/*<CounterComponent/>*/}
+            {/*<HelloContainer/>*/}
+            {/*<HelloWorld messageProperty={'Hello World????'}/>*/}
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

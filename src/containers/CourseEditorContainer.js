@@ -1,9 +1,9 @@
 import React from "react";
-import ModuleListComponent from "../components/ModuleListComponent";
 import LessonTabsComponent from "../components/LessonTabsComponent";
 import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
 import courseService from "../services/CourseService"
+import ModuleListContainer from "./ModuleListContainer";
 
 // stateless component
 class CourseEditorContainer
@@ -53,7 +53,7 @@ class CourseEditorContainer
                 </div>
                 <div className="row wbdv-no-margin">
                     {
-                        <ModuleListComponent/>
+                        <ModuleListContainer/>
                     }
                     <div className="col-md-8 wbdv-no-padding">
                         {
