@@ -314,18 +314,14 @@ tbody {
   height: 100%;
 }
 
-.wbdv-x-button {
-  padding-top: 0px;
+.wbdv-module-button, .wbdv-module-button:hover {
+  padding-top: 3px;
   padding-bottom: 0px;
   padding-right: 0.2rem;
-}
-
-.wbdv-bottom-plus  {
-  padding: 10px 10px;
   color: #cecece;
 }
 
-.wbdv-bottom-plus:hover {
+.wbdv-bottom-plus, .wbdv-bottom-plus:hover  {
   padding: 10px 10px;
   color: #cecece;
 }
