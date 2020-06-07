@@ -19,6 +19,10 @@ tbody {
   border-left: 2px solid #cecece;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .form-group {
   margin: 0px 0px;
 }
@@ -95,7 +99,7 @@ tbody {
   padding: 0px 7px
 }
 
-.wbdv-selected-white {
+.wbdv-selected-white, .wbdv-selected-white:hover {
   color: white
 }
 
@@ -223,7 +227,7 @@ tbody {
   background-color: #007bff;
 }
 
-.wbdv-sharp-blue {
+.wbdv-sharp-blue, .wbdv-sharp-blue:hover {
   color: #007bff;
 }
 
@@ -387,9 +391,9 @@ tbody {
 }
 
 .wbdv-topic-button, .wbdv-topic-button:hover {
-  padding: 3px 0.4rem 0px 8px;
+  padding: 0px 5px 0px 0px;
+  line-height: 30px;
   color: white;
-  line-height: 26px;
 }
 
 @import "~bootstrap/dist/css/bootstrap.min.css";

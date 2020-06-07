@@ -52,11 +52,12 @@ export default class CourseRowComponent extends React.Component {
                     </div>
                     {
                         !this.state.editing &&
-                        <div className={this.props.selected ?
-                                        'col-11 text-truncate wbdv-title-text wbdv-selected-white' :
-                                        'col-11 text-truncate wbdv-title-text wbdv-sharp-blue'}>
-                                <Link to={`/editor/${this.state.course._id}`}>
-                                    <span className={this.props.selected ? 'wbdv-selected-white' : ''}>
+                        <div className="col-11 text-truncate wbdv-title-text">
+                                <Link to={`/editor/${this.state.course._id}`}
+                                      className={this.props.selected ?
+                                                 'wbdv-selected-white' :
+                                                 'wbdv-sharp-blue'}>
+                                    <span className={`wbdv-manager-link ${this.props.selected ? 'wbdv-selected-white' : ''}`}>
                                         {this.state.course.title}
                                     </span>
                                 </Link>
