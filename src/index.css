@@ -264,14 +264,15 @@ tbody {
   border-radius: 2px;
 }
 
-.nav-link {
+.nav-link, .nav-link:hover {
   padding: 9px 22px;
   font-size: 22px;
+  color: #cecece
 }
 
 .nav-pills > .nav-link.active {
   background-color: #373C3F;
-  color: #cecece;
+  color: white;
 }
 
 .topic-link {
@@ -374,6 +375,13 @@ tbody {
 
 .wbdv-home-links {
   font-size: 28px;
+}
+
+.wbdv-lesson-button, .wbdv-lesson-button:hover {
+  padding-top: 3px;
+  padding-bottom: 0px;
+  padding-right: 0.2rem;
+  color: white;
 }
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
