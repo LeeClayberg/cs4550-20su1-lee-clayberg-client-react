@@ -2,7 +2,7 @@ import React from "react";
 
 class LessonTabsComponent extends React.Component {
         state = {
-                newModuleTitle: 'New Lesson',
+                newLessonTitle: 'New Lesson',
                 editingLesson: {},
                 selected: {}
         }
@@ -22,8 +22,12 @@ class LessonTabsComponent extends React.Component {
                     <span>
                         <ul className="nav nav-pills nav-fill wbdv-lesson-tabs float-right">
                             {
-                                    this.props.lessons.map(module =>
-                                                               <il className="nav-item nav-link">Build</il>)
+                                this.props.lessons.map(lesson =>
+                                     <il className="nav-item nav-link">
+                                             {lesson.title}
+                                             <i className="btn fa fa-times float-right wbdv-module-button wbdv-module-item-delete-btn"
+                                                onClick={() => this.props.deleteLesson(lesson._id)}/>
+                                     </il>)
                             }
                             <il className="wbdv-no-padding">
                                 <i className="btn fa fa-plus fa-lg wbdv-top-plus wbdv-lesson-add-btn float-right"

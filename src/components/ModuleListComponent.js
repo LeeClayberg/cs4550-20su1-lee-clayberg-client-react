@@ -5,7 +5,7 @@ class ModuleListComponent extends React.Component {
     state = {
         newModuleTitle: 'New Module',
         editingModule: {},
-        selected: {}
+        selected: this.props.params.moduleId
     }
 
     componentDidMount() {
@@ -21,10 +21,10 @@ class ModuleListComponent extends React.Component {
                         this.props.modules.map(module =>
                             <Link key={module._id}
                                   to={`/editor/${this.props.params.courseId}/modules/${module._id}`}
-                                  className={`list-group-item align-middle wbdv-module-item ${this.state.selected._id === module._id ? "active" : ""}`}
+                                  className={`list-group-item align-middle wbdv-module-item ${this.state.selected === module._id ? "active" : ""}`}
                                   onClick={() => {
                                         this.setState({
-                                            selected: module
+                                            selected: module._id
                                         });
                                     }}>
                                 {
@@ -58,7 +58,7 @@ class ModuleListComponent extends React.Component {
                                     </span>
                                 }
                                 {
-                                    this.state.editingModule._id !== module._id && this.state.selected._id === module._id &&
+                                    this.state.editingModule._id !== module._id && this.state.selected === module._id &&
                                     <i className="btn fa fa-pencil float-right wbdv-module-button wbdv-module-item-edit-btn"
                                        onClick={() => this.setState({editingModule: module})}/>
                                 }
