@@ -280,6 +280,7 @@ tbody {
   color: white;
   padding: 2px;
   margin: 10px;
+  cursor: pointer;
 }
 
 .nav-pills > .topic-link.active {

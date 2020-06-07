@@ -5,7 +5,7 @@ class LessonTabsComponent extends React.Component {
     state = {
         newLessonTitle: 'New Lesson',
         editingLesson: {},
-        selected: {}
+        selected: this.props.params.lessonId
     }
 
     componentDidMount() {
