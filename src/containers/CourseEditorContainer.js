@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import ModuleListContainer from "./ModuleListContainer";
 import LessonTabsContainer from "./LessonTabsContainer";
 import TopicPillsContainer from "./TopicPillsContainer";
-import courseService from "../services/CourseService"
 
 const CourseEditorContainer = ({match}) => {
         return (
