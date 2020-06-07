@@ -25,11 +25,12 @@ class LessonTabsComponent extends React.Component {
                      {
                          this.props.lessons.map(lesson =>
                               <Link className={`nav-item nav-link ${this.state.selected === lesson._id ? "active" : ""}`}
-                                  onClick={() => {
+                                    to={`/editor/${this.props.params.courseId}/modules/${this.props.params.moduleId}/lessons/${lesson._id}`}
+                                    onClick={() => {
                                           this.setState({
-                                                                selected: lesson._id
-                                                        });
-                                  }}>
+                                                selected: lesson._id
+                                          });
+                                    }}>
                                       {
                                               this.state.editingLesson._id === lesson._id &&
                                               <input
