@@ -30,6 +30,7 @@ class ModuleListComponent extends React.Component {
                                 {
                                     this.state.editingModule._id === module._id &&
                                     <input value={this.state.editingModule.title}
+                                           onclick="this.select()"
                                            onChange={(e) => {
                                                const newTitle = e.target.value
                                                this.setState(prevState => ({

@@ -342,7 +342,7 @@ tbody {
   color: #cecece;
 }
 
-.wbdv-top-plus {
+.wbdv-top-plus, .wbdv-top-plus:hover {
   padding: 15px 10px;
   color: #cecece;
 }
