@@ -12,7 +12,7 @@ const stateToPropertyMapper = (state, ownProps) => {
 
 const dispatchToPropertyMapper = (dispatch) => {
     return {
-        findLessonForModule: (lessonId) => {
+        findLessonsForModule: (lessonId) => {
             LessonService.findLessonsForModule(lessonId)
                 .then(lessonsForTheModule => dispatch({
                                                           type: 'FIND_LESSONS_FOR_MODULE',

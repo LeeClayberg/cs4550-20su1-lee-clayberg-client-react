@@ -1,10 +1,10 @@
 import React from "react";
-import LessonTabsComponent from "../components/LessonTabsComponent";
 import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
 import ModuleListContainer from "./ModuleListContainer";
+import LessonTabsContainer from "./LessonTabsContainer";
 
-// stateless component
+
 const CourseEditorContainer = ({match}) => {
         return (
             <div className="container">
@@ -20,7 +20,7 @@ const CourseEditorContainer = ({match}) => {
                         </div>
                         <div className="col-7 d-none d-md-block wbdv-no-padding wbdv-lesson-top">
                             {
-                                <LessonTabsComponent {...match}/>
+                                <LessonTabsContainer {...match}/>
                             }
                         </div>
                         <div className="col-2 d-md-none wbdv-collapsed-lesson">
