@@ -1,10 +1,9 @@
 import React from "react";
-import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
 import ModuleListContainer from "./ModuleListContainer";
 import LessonTabsContainer from "./LessonTabsContainer";
 import TopicPillsContainer from "./TopicPillsContainer";
-
+import courseService from "../services/CourseService"
 
 const CourseEditorContainer = ({match}) => {
         return (
@@ -17,7 +16,7 @@ const CourseEditorContainer = ({match}) => {
                             </Link>
                         </div>
                         <div className="col-10 col-md-2 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
-                           Course Title
+                            Course Name
                         </div>
                         <div className="col-12 col-md-9 wbdv-no-padding wbdv-lesson-top">
                             {
