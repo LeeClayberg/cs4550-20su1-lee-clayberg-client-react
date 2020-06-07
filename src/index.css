@@ -354,13 +354,14 @@ tbody {
   font-size: 25px;
 }
 
-.wbdv-topic-plus {
+.wbdv-topic-plus, .wbdv-topic-plus:hover {
   background-color: #888888;
   width: 30px;
   height: 30px;
   margin: 10px;
-  padding-top: 2px;
+  padding: 2px 0px;
   color: white;
+  border-radius: 0px;
 }
 
 .wbdv-collapsed-lesson {

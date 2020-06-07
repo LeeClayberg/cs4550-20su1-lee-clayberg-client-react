@@ -3,6 +3,7 @@ import TopicPillsComponent from "../components/TopicPillsComponent";
 import {Link} from "react-router-dom";
 import ModuleListContainer from "./ModuleListContainer";
 import LessonTabsContainer from "./LessonTabsContainer";
+import TopicPillsContainer from "./TopicPillsContainer";
 
 
 const CourseEditorContainer = ({match}) => {
@@ -31,7 +32,7 @@ const CourseEditorContainer = ({match}) => {
                     }
                     <div className="col-md-8 wbdv-no-padding">
                         {
-                            <TopicPillsComponent/>
+                            <TopicPillsContainer {...match}/>
                         }
                     </div>
                 </div>

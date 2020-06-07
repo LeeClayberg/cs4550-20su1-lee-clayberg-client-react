@@ -1,16 +1,47 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-const TopicPillsComponent = () =>
-    <div className="wbdv-topics">
-        <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
-            <a className="nav-item topic-link wbdv-topic-pill">Topic 1</a>
-            <a className="nav-item topic-link active wbdv-topic-pill">Topic 2</a>
-            <a className="nav-item topic-link wbdv-topic-pill">Topic 3</a>
-            <a className="nav-item topic-link wbdv-topic-pill">Topic 4</a>
-            <a className="wbdv-topic-plus align-middle" align="center">
-                <i className="fa fa-plus fa-sm wbdv-topic-add-btn"></i>
-            </a>
-        </ul>
-    </div>
+class TopicPillsComponent extends React.Component {
+    state = {
+        newTopicTitle: 'New Topic',
+        editingTopic: {},
+        selected: {}
+    }
+
+    componentDidMount() {
+        this.props.findTopicsForLesson(this.props.params.lessonId)
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.params.moduleId !== this.props.params.moduleId ||
+            prevProps.params.lessonId !== this.props.params.lessonId) {
+            this.props.findTopicsForLesson(this.props.params.lessonId)
+        }
+    }
+
+    render() {
+        return (
+            <div className="wbdv-topics">
+                <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
+                    {
+                        this.props.topics.map(topic =>
+                             <il className="nav-item topic-link wbdv-topic-pill">{topic.title}</il>)
+                    }
+                    {
+                        this.props.params.lessonId &&
+                        <il className="btn wbdv-topic-plus align-middle" align="center">
+                            <i className="fa fa-plus fa-sm wbdv-topic-add-btn"
+                               onClick={() => this.props.createTopic(
+                                   this.props.params.lessonId,
+                                   {
+                                       title: this.state.newTopicTitle
+                                   })}/>
+                        </il>
+                    }
+                </ul>
+            </div>
+        )
+    }
+}
 
 export default TopicPillsComponent
