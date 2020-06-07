@@ -20,21 +20,21 @@ const dispatchToPropertyMapper = (dispatch) => {
                                                       }))
         },
         updateLesson: (lessonId, newLessonData) => {
-            LessonService.updateModule(lessonId, newLessonData)
+            LessonService.updateLesson(lessonId, newLessonData)
                 .then(status => dispatch({
                                              type: 'UPDATE_LESSON',
                                              updatedLesson: newLessonData
                                          }))
         },
         createLesson: (moduleId, newLesson) => {
-            LessonService.createModule(moduleId, newLesson)
+            LessonService.createLesson(moduleId, newLesson)
                 .then(actualNewLesson => dispatch({
-                                                      type: "ADD_LESSON",
+                                                      type: "CREATE_LESSON",
                                                       newLesson: actualNewLesson
                                                   }))
         },
         deleteLesson: (lessonId) => {
-            LessonService.deleteModule(lessonId)
+            LessonService.deleteLesson(lessonId)
                 .then(status => dispatch({
                                              type: "DELETE_LESSON",
                                              lessonId: lessonId

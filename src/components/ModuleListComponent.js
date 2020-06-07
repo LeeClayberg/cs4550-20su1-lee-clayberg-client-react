@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class ModuleListComponent extends React.Component {
     state = {
@@ -12,17 +13,20 @@ class ModuleListComponent extends React.Component {
     }
 
     render() {
-        console.log(this.state.selected);
         return (
             <div className="col-md-4 wbdv-no-padding">
                 <div className="wbdv-module-list">
                     <ul className="list-group">
                         {
                         this.props.modules.map(module =>
-                            <li key={module._id} className={`list-group-item align-middle wbdv-module-item ${this.state.selected._id === module._id ? "active" : ""}`}
-                                onClick={() => this.setState({
-                                    selected: module
-                                })}>
+                            <Link key={module._id}
+                                  to={`/editor/${this.props.params.courseId}/modules/${module._id}`}
+                                  className={`list-group-item align-middle wbdv-module-item ${this.state.selected._id === module._id ? "active" : ""}`}
+                                  onClick={() => {
+                                        this.setState({
+                                            selected: module
+                                        });
+                                    }}>
                                 {
                                     this.state.editingModule._id === module._id &&
                                     <input value={this.state.editingModule.title}
@@ -38,9 +42,9 @@ class ModuleListComponent extends React.Component {
                                 }
                                 {
                                     this.state.editingModule._id !== module._id &&
-                                    <a className="wbdv-module-item-title">
+                                    <span className="wbdv-module-item-title">
                                         {module.title}
-                                    </a>
+                                    </span>
                                 }
                                 {
                                     this.state.editingModule._id === module._id &&
@@ -58,7 +62,7 @@ class ModuleListComponent extends React.Component {
                                     <i className="btn fa fa-pencil float-right wbdv-module-button wbdv-module-item-edit-btn"
                                        onClick={() => this.setState({editingModule: module})}/>
                                 }
-                            </li>
+                            </Link>
                         )}
                     </ul>
                     <div className="align-middle" align="right">

@@ -238,6 +238,22 @@ tbody {
   border-radius: 2px;
   margin-bottom: 10px;
   padding: 10px 20px;
+  text-decoration: none;
+}
+
+.list-group-item:hover {
+  background-color: #454B4F;
+  color: #cecece;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.list-group-item.active:hover {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
 }
 
 .list-group-item:first-child {
@@ -327,7 +343,7 @@ tbody {
 
 .wbdv-top-plus {
   padding: 15px 10px;
-  color: white;
+  color: #cecece;
 }
 
 .wbdv-course-title {

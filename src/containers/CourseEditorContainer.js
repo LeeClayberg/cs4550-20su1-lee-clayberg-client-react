@@ -15,22 +15,13 @@ const CourseEditorContainer = ({match}) => {
                                 <i className="fa fa-times fa-lg wbdv-module-top-x"></i>
                             </Link>
                         </div>
-                        <div className="col-7 col-md-3 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
+                        <div className="col-10 col-md-2 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
                            Course Title
                         </div>
-                        <div className="col-7 d-none d-md-block wbdv-no-padding wbdv-lesson-top">
+                        <div className="col-12 col-md-9 wbdv-no-padding wbdv-lesson-top">
                             {
                                 <LessonTabsContainer {...match}/>
                             }
-                        </div>
-                        <div className="col-2 d-md-none wbdv-collapsed-lesson">
-                            Pages
-                        </div>
-                        <div className="d-none d-md-block col-md-1 wbdv-no-padding">
-                            <i className="fa fa-plus fa-lg wbdv-top-plus wbdv-lesson-add-btn float-right"></i>
-                        </div>
-                        <div className="col-1 d-md-none wbdv-no-padding">
-                            <i className="fa fa-bars fa-lg wbdv-top-plus wbdv-lesson-add-btn float-right"></i>
                         </div>
                     </div>
                 </div>
