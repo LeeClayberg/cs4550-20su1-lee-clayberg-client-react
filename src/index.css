@@ -386,5 +386,11 @@ tbody {
   color: white;
 }
 
+.wbdv-topic-button, .wbdv-topic-button:hover {
+  padding: 3px 0.4rem 0px 8px;
+  color: white;
+  line-height: 26px;
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";

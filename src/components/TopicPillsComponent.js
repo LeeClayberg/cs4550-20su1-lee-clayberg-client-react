@@ -52,15 +52,17 @@ class TopicPillsComponent extends React.Component {
                                  {
                                      this.state.editingTopic._id === topic._id &&
                                      <span>
-                                        <i className="btn fa fa-check float-right wbdv-module-button wbdv-module-item-save-btn"
-                                           onClick={() => {
+                                         <i className="btn fa fa-times float-right wbdv-topic-button"
+                                            onClick={() => this.props.deleteTopic(topic._id)}/>
+                                         <i className="btn fa fa-check float-right wbdv-topic-button"
+                                            onClick={() => {
                                                this.props.updateTopic(this.state.editingTopic._id, this.state.editingTopic)
                                                this.setState({editingTopic: {}})}}/>
                                     </span>
                                  }
                                  {
                                      this.state.editingTopic._id !== topic._id && this.state.selected === topic._id &&
-                                     <i className="btn fa fa-pencil float-right wbdv-module-button wbdv-module-item-edit-btn"
+                                     <i className="btn fa fa-pencil float-right wbdv-topic-button"
                                         onClick={() => this.setState({editingTopic: topic})}/>
                                  }
                              </il>)
