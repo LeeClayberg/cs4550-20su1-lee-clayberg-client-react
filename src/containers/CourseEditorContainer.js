@@ -20,7 +20,7 @@ const CourseEditorContainer = ({match}) => {
                         </div>
                         <div className="col-7 d-none d-md-block wbdv-no-padding wbdv-lesson-top">
                             {
-                                <LessonTabsComponent/>
+                                <LessonTabsComponent {...match}/>
                             }
                         </div>
                         <div className="col-2 d-md-none wbdv-collapsed-lesson">

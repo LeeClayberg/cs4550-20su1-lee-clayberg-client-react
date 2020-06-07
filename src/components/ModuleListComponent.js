@@ -3,7 +3,8 @@ import React from "react";
 class ModuleListComponent extends React.Component {
     state = {
         newModuleTitle: 'New Module',
-        editingModule: {}
+        editingModule: {},
+        selected: {}
     }
 
     componentDidMount() {
@@ -11,44 +12,51 @@ class ModuleListComponent extends React.Component {
     }
 
     render() {
+        console.log(this.state.selected);
         return (
             <div className="col-md-4 wbdv-no-padding">
                 <div className="wbdv-module-list">
                     <ul className="list-group">
                         {
                         this.props.modules.map(module =>
-                            <li key={module._id} className="list-group-item align-middle wbdv-module-item">
+                            <li key={module._id} className={`list-group-item align-middle wbdv-module-item ${this.state.selected._id === module._id ? "active" : ""}`}
+                                onClick={() => this.setState({
+                                    selected: module
+                                })}>
                                 {
                                     this.state.editingModule._id === module._id &&
-                                    <span>
-                                        <input value={this.state.editingModule.title}
-                                                onChange={(e) => {
-                                                    const newTitle = e.target.value
-                                                    this.setState(prevState => ({
-                                                        editingModule: {
-                                                        ...prevState.editingModule,
-                                                        title: newTitle
-                                                    }
-                                                }))
-                                            }}/>
-                                        <i className="btn fa fa-times float-right wbdv-module-button wbdv-module-item-delete-btn"
-                                           onClick={() => this.props.deleteModule(module._id)}/>
-                                        <i className="btn fa fa-check float-right wbdv-module-button wbdv-module-item-save-btn"
-                                           onClick={() => {
-                                               this.props.updateModule(this.state.editingModule._id, this.state.editingModule)
-                                               this.setState({editingModule: {}})
+                                    <input value={this.state.editingModule.title}
+                                           onChange={(e) => {
+                                               const newTitle = e.target.value
+                                               this.setState(prevState => ({
+                                                   editingModule: {
+                                                       ...prevState.editingModule,
+                                                       title: newTitle
+                                                   }
+                                               }))
                                            }}/>
-                                    </span>
                                 }
                                 {
                                     this.state.editingModule._id !== module._id &&
+                                    <a className="wbdv-module-item-title">
+                                        {module.title}
+                                    </a>
+                                }
+                                {
+                                    this.state.editingModule._id === module._id &&
                                     <span>
-                                        <a className="wbdv-module-item-title">
-                                            {module.title}
-                                        </a>
-                                        <i className="btn fa fa-pencil float-right wbdv-module-button wbdv-module-item-edit-btn"
-                                            onClick={() => this.setState({editingModule: module})}/>
+                                        <i className="btn fa fa-times float-right wbdv-module-button wbdv-module-item-delete-btn"
+                                           onClick={() => this.props.deleteModule(module._id)}/>
+                                        <i className="btn fa fa-check float-right wbdv-module-button wbdv-module-item-save-btn"
+                                        onClick={() => {
+                                        this.props.updateModule(this.state.editingModule._id, this.state.editingModule)
+                                        this.setState({editingModule: {}})}}/>
                                     </span>
+                                }
+                                {
+                                    this.state.editingModule._id !== module._id && this.state.selected._id === module._id &&
+                                    <i className="btn fa fa-pencil float-right wbdv-module-button wbdv-module-item-edit-btn"
+                                       onClick={() => this.setState({editingModule: module})}/>
                                 }
                             </li>
                         )}
