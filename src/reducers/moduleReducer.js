@@ -18,7 +18,7 @@ const moduleReducer = (state=initialState, event) => {
         ...state,
         modules: event.modules
       }
-    case "ADD_MODULE":
+    case "CREATE_MODULE":
       return {
         modules: [
           ...state.modules,
