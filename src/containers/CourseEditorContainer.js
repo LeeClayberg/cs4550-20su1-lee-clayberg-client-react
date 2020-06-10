@@ -30,7 +30,8 @@ class CourseEditorContainer extends React.Component {
                             </Link>
                         </div>
                         <div
-                            className="col-10 col-md-2 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle">
+                            className="col-10 col-md-2 text-truncate wbdv-course-title wbdv-course-title wbdv-no-padding align-middle"
+                            title={this.state.courseName}>
                             {this.state.courseName}
                         </div>
                         <div className="col-12 col-md-9 wbdv-no-padding wbdv-lesson-top">
