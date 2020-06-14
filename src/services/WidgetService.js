@@ -30,10 +30,19 @@ const createWidget = (topicId, newWidget) =>
     })
         .then(response => response.json())
 
-const findAllWidgets = (lessonId) =>
-    fetch(`https://cs4550-20sm1-clayberg-server.herokuapp.com/api/topics/${lessonId}/widgets`)
+const findAllWidgets = () =>
+    fetch(`https://cs4550-20sm1-clayberg-server.herokuapp.com/api/widgets`)
+        .then(response => response.json())
+
+const findWidgetById = (widgetId) =>
+    fetch(`https://cs4550-20sm1-clayberg-server.herokuapp.com/api/widgets/${widgetId}`)
         .then(response => response.json())
 
 export default {
-
+    findWidgetsForTopic,
+    deleteWidget,
+    updateWidget,
+    createWidget,
+    findAllWidgets,
+    findWidgetById
 }
