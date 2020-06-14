@@ -49,6 +49,11 @@ class CourseEditorContainer extends React.Component {
                         {
                             <TopicPillsContainer {...this.props.match}/>
                         }
+                        <div className="">
+                            {
+                                <WidgetListContainer {...this.props.match}/>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
