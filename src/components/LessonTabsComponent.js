@@ -16,6 +16,11 @@ class LessonTabsComponent extends React.Component {
         if (prevProps.params.moduleId !== this.props.params.moduleId) {
             this.props.findLessonsForModule(this.props.params.moduleId)
         }
+        if (prevProps.params.lessonId !== this.props.params.lessonId) {
+            this.setState({
+                selected: this.props.params.lessonId
+            });
+        }
     }
 
     render() {

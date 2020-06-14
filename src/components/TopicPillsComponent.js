@@ -14,7 +14,10 @@ class TopicPillsComponent extends React.Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.params.moduleId !== this.props.params.moduleId ||
             prevProps.params.lessonId !== this.props.params.lessonId) {
-            this.props.findTopicsForLesson(this.props.params.lessonId)
+            this.props.findTopicsForLesson(this.props.params.lessonId);
+            this.setState({
+                selected: {}
+            });
         }
     }
 
