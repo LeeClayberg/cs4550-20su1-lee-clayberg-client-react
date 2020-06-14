@@ -1,50 +1,49 @@
 import {connect} from "react-redux";
-import TopicPillsComponent from "../components/TopicPillsComponent";
-import TopicService from "../services/TopicService";
+import WidgetListComponent from "../components/WidgetListComponent";
+import WidgetService from "../services/WidgetService";
 
 const stateToPropertyMapper = (state, ownProps) => {
     return {
-        topics: state.topicReducer.topics,
-        newTopicTitle: state.topicReducer.newTopicTitle,
+        widgets: state.widgetReducer.widgets,
         params: ownProps.params
     }
 }
 
 const dispatchToPropertyMapper = (dispatch) => {
     return {
-        findTopicsForLesson: (lessonId) => {
-            TopicService.findTopicsForLesson(lessonId)
-                .then(topicsForTheLesson => dispatch({
-                                                         type: 'FIND_TOPICS_FOR_LESSON',
-                                                         topics: topicsForTheLesson
+        findWidgetsForTopic: (topicId) => {
+            WidgetService.findWidgetsForTopic(topicId)
+                .then(widgetsForTopic => dispatch({
+                                                         type: 'FIND_ALL_WIDGETS_FOR_TOPIC',
+                                                         widgets: widgetsForTopic
                                                      }))
         },
-        updateTopic: (topicId, newTopicData) => {
-            TopicService.updateTopic(topicId, newTopicData)
+        updateWidget: (widgetId, newWidgetData) => {
+            WidgetService.updateWidget(widgetId, newWidgetData)
                 .then(status => dispatch({
-                                             type: 'UPDATE_TOPIC',
-                                             updatedTopic: newTopicData
+                                             type: 'UPDATE_WIDGET',
+                                             updatedWidget: newWidgetData
                                          }))
         },
-        createTopic: (lessonId, newTopic) => {
-            TopicService.createTopic(lessonId, newTopic)
-                .then(actualNewTopic => dispatch({
-                                                     type: "CREATE_TOPIC",
-                                                     newTopic: actualNewTopic
+        createWidget: (topicId, newWidget) => {
+            WidgetService.createWidget(topicId, newWidget)
+                .then(actualNewWidget => dispatch({
+                                                     type: "CREATE_WIDGET",
+                                                     newWidget: actualNewWidget
                                                  }))
         },
-        deleteTopic: (topicId) => {
-            TopicService.deleteTopic(topicId)
+        deleteWidget: (widgetId) => {
+            WidgetService.deleteWidget(widgetId)
                 .then(status => dispatch({
-                                             type: "DELETE_TOPIC",
-                                             topicId: topicId
+                                             type: "DELETE_WIDGET",
+                                             widgetId: widgetId
                                          }))
         }
     }
 }
 
-const TopicPillsContainer = connect
+const WidgetListContainer = connect
 (stateToPropertyMapper, dispatchToPropertyMapper)
-(TopicPillsComponent)
+(WidgetListComponent)
 
-export default TopicPillsContainer
+export default WidgetListContainer
