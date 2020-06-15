@@ -3,6 +3,7 @@ import WidgetComponent from "./WidgetComponent";
 
 class WidgetListComponent extends React.Component {
     state = {
+        preview: false
     }
 
     componentDidMount() {
@@ -27,6 +28,12 @@ class WidgetListComponent extends React.Component {
         })
     }
 
+    updatePreview = (checked) => {
+        this.setState(prevState => ({
+            preview: checked
+        }))
+    };
+
     render() {
         return (
             <span>
@@ -42,6 +49,8 @@ class WidgetListComponent extends React.Component {
                             </div>
                             <div className="custom-control custom-switch">
                                 <input type="checkbox" className="custom-control-input"
+                                       checked={this.state.preview}
+                                       onChange={(event) => this.updatePreview(event.target.checked)}
                                        id="customSwitches"/>
                                 <label className="custom-control-label" htmlFor="customSwitches"/>
                             </div>
@@ -49,7 +58,9 @@ class WidgetListComponent extends React.Component {
                         <ul className="list-group">
                             {
                             this.props.widgets.map(widget =>
-                                 <WidgetComponent widget={widget} deleteWidget={this.props.deleteWidget}/>)
+                                 <WidgetComponent widget={widget} deleteWidget={this.props.deleteWidget}
+                                                  updateWidget={this.props.updateWidget}
+                                                  preview={this.state.preview}/>)
                             }
                             <div className="col-12">
                                 <div className="btn btn-danger float-right wbdv-widget-add"
