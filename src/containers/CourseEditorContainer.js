@@ -4,6 +4,7 @@ import ModuleListContainer from "./ModuleListContainer";
 import LessonTabsContainer from "./LessonTabsContainer";
 import TopicPillsContainer from "./TopicPillsContainer";
 import courseService from "../services/CourseService";
+import WidgetListContainer from "./WidgetListContainer";
 
 class CourseEditorContainer extends React.Component {
     state = {

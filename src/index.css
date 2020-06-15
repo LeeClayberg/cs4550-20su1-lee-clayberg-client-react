@@ -314,7 +314,6 @@ a:hover {
   font-size: 18px;
   padding: 14px 14px;
   margin: 0px;
-  height: 100%;
 }
 
 .wbdv-module-top-x {
@@ -396,5 +395,71 @@ a:hover {
   color: white;
 }
 
+.wbdv-widgets {
+  background-color: white;
+  padding: 20px 30px;
+  font-size: 20px;
+}
+
+.wbdv-widgets-top {
+  padding: 20px 0px;
+}
+
+.wbdv-top-spacing {
+  margin-right: 10px;
+  padding: 2px 10px;
+}
+
+.widget-item {
+  background-color: white;
+  border-radius: 3px;
+  border: #aaaaaa solid 2px;
+  font-size: 25px;
+  padding: 0px 10px;
+}
+
+.wbdv-widget-btn {
+  padding: 1px;
+}
+
+/* switch */
+
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #000000;
+  background-color: #000000;
+}
+
+.custom-switch .custom-control-label::before {
+  left: -2.25rem;
+  width: 2.25rem;
+  pointer-events: all;
+  border-radius: 1.25rem;
+}
+
+.custom-control-label::before {
+  position: absolute;
+  top: .25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1.5rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #000000 solid 2px;
+}
+
+.custom-switch .custom-control-label::after {
+  top: calc(.35rem + 2px);
+  left: calc(-2.15rem + 2px);
+  width: calc(1.3rem - 4px);
+  height: calc(1.3rem - 4px);
+  background-color: #000000;
+  border-radius: .75rem;
+  transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
+

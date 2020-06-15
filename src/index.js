@@ -8,9 +8,10 @@ import {Provider} from "react-redux";
 import moduleReducer from "./reducers/moduleReducer";
 import lessonReducer from "./reducers/lessonReducer";
 import topicReducer from "./reducers/topicReducer";
+import widgetReducer from "./reducers/widgetReducer";
 
 const reducers = combineReducers({
-    moduleReducer, lessonReducer, topicReducer
+    moduleReducer, lessonReducer, topicReducer, widgetReducer
 })
 const store = createStore(reducers)
 
