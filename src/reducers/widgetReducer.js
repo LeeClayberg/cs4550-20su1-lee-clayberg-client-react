@@ -22,8 +22,6 @@ const widgetReducer = (state=initialState, action) => {
                 ...state,
                 widgets: action.widgets
             }
-        case "FIND_ALL_LOCAL_WIDGETS_FOR_TOPIC":
-            return state;
         case "CREATE_WIDGET":
             return {
                 ...state,

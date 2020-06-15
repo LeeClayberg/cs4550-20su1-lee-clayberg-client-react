@@ -15,8 +15,8 @@ class WidgetComponent extends React.Component {
                         Heading Widget
                     </div>
                     <div className="col-6 wbdv-widget-top-col">
-                        <div
-                            className="btn btn-danger float-right wbdv-widget-x-btn">
+                        <div className="btn btn-danger float-right wbdv-widget-x-btn"
+                            onClick={() => this.props.deleteWidget(this.props.widget.id)}>
                             <i className="fa fa-times"/>
                         </div>
                         <select

@@ -9,9 +9,16 @@ class WidgetListComponent extends React.Component {
         this.props.findWidgetsForTopic(this.props.params.topicId)
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.params.topicId !== this.props.params.topicId) {
+            this.props.findWidgetsForTopic(this.props.params.topicId);
+        }
+    }
+
     addWidget = () => {
         this.props.createWidget(this.props.params.topicId, {
             name: "",
+            id: new Date().getTime(),
             topicId: this.props.params.topicId,
             type: "heading",
             widgetOrder: this.props.widgets.length,
@@ -41,7 +48,7 @@ class WidgetListComponent extends React.Component {
                         <ul className="list-group">
                             {
                             this.props.widgets.map(widget =>
-                                 <WidgetComponent widget={widget} {...this.props.match}/>)
+                                 <WidgetComponent widget={widget} deleteWidget={this.props.deleteWidget}/>)
                             }
                             <div className="col-12">
                                 <div className="btn btn-danger float-right wbdv-widget-add"

@@ -18,11 +18,6 @@ const dispatchToPropertyMapper = (dispatch) => {
                     widgets: widgetsForTopic
                 }))
         },
-        findLocalWidgetsForTopic: () => {
-            dispatch({
-                type: 'FIND_ALL_LOCAL_WIDGETS_FOR_TOPIC'
-            })
-        },
         updateWidget: (widgetId, newWidgetData) => {
             dispatch({
                 type: 'UPDATE_WIDGET',
