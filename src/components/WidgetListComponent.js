@@ -22,6 +22,7 @@ class WidgetListComponent extends React.Component {
             topicId: this.props.params.topicId,
             type: "heading",
             widgetOrder: this.props.widgets.length,
+            style: 1,
             text: ""
         })
     }

@@ -1,10 +1,22 @@
 import React from "react";
 
 class WidgetComponent extends React.Component {
-    state = {}
+    state = {
+        name: "",
+        type: "",
+        widgetOrder: 0,
+        style: 0,
+        text: ""
+    }
 
     componentDidMount() {
-
+        this.setState({
+             name: this.props.widget.name,
+             type: this.props.widget.type,
+             widgetOrder: this.props.widget.widgetOrder,
+             style: this.props.widget.style,
+             text: this.props.widget.text
+        })
     }
 
     render() {
