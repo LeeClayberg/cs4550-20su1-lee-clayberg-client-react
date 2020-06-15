@@ -56,6 +56,7 @@ class WidgetComponent extends React.Component {
     }
 
     preview = () =>
+        this.state.type == 'paragraph' ? <p>{this.state.text}</p> :
         this.state.style === 1  ? <h1>{this.state.text}</h1> :
         this.state.style === 2  ? <h2>{this.state.text}</h2> :
         this.state.style === 3  ? <h3>{this.state.text}</h3> :
@@ -94,20 +95,32 @@ class WidgetComponent extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <input type="text" className="form-control wbdv-widget-vertical"
-                               placeholder="Heading text"
-                               value={this.state.text}
-                               onChange={(event) => this.updateText(event.target.value)}/>
-                        <select className="form-control wbdv-widget-vertical"
-                                value={this.state.style}
-                                onChange={(event) => this.updateStyle(event.target.value)}>
-                            <option value={1}>Heading 1</option>
-                            <option value={2}>Heading 2</option>
-                            <option value={3}>Heading 3</option>
-                            <option value={4}>Heading 4</option>
-                            <option value={5}>Heading 5</option>
-                            <option value={6}>Heading 6</option>
-                        </select>
+                        {
+                            this.state.type == 'heading' &&
+                            <span>
+                                <input type="text" className="form-control wbdv-widget-vertical"
+                                       placeholder="Heading text"
+                                       value={this.state.text}
+                                       onChange={(event) => this.updateText(event.target.value)}/>
+                                < select className="form-control wbdv-widget-vertical"
+                                    value={this.state.style}
+                                    onChange={(event) => this.updateStyle(event.target.value)}>
+                                    <option value={1}>Heading 1</option>
+                                    <option value={2}>Heading 2</option>
+                                    <option value={3}>Heading 3</option>
+                                    <option value={4}>Heading 4</option>
+                                    <option value={5}>Heading 5</option>
+                                    <option value={6}>Heading 6</option>
+                                </select>
+                            </span>
+                        }
+                        {
+                            this.state.type == 'paragraph' &&
+                            <textarea className="form-control wbdv-widget-vertical"
+                                      value={this.state.text}
+                                      onChange={(event) => this.updateText(event.target.value)}
+                                      placeholder="Paragraph text"/>
+                        }
                         <input type="text" className="form-control wbdv-widget-vertical"
                                placeholder="Widget name"
                                value={this.state.name}
