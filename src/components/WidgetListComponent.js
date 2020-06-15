@@ -6,7 +6,17 @@ class WidgetListComponent extends React.Component {
     }
 
     componentDidMount() {
+        this.props.findWidgetsForTopic(this.props.params.topicId)
+    }
 
+    addWidget = () => {
+        this.props.createWidget(this.props.params.topicId, {
+            name: "",
+            topicId: this.props.params.topicId,
+            type: "heading",
+            widgetOrder: this.props.widgets.length,
+            text: ""
+        })
     }
 
     render() {
@@ -29,9 +39,13 @@ class WidgetListComponent extends React.Component {
                             </div>
                         </div>
                         <ul className="list-group">
-                            <WidgetComponent {...this.props.match}/>
+                            {
+                            this.props.widgets.map(widget =>
+                                 <WidgetComponent widget={widget} {...this.props.match}/>)
+                            }
                             <div className="col-12">
-                                <div className="btn btn-danger float-right wbdv-widget-add">
+                                <div className="btn btn-danger float-right wbdv-widget-add"
+                                    onClick={() => this.addWidget()}>
                                     <i className="fa fa-plus-circle"/>
                                 </div>
                             </div>
