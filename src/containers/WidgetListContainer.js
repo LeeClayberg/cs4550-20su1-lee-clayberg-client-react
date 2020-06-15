@@ -36,13 +36,22 @@ const dispatchToPropertyMapper = (dispatch) => {
                 widgetId: widgetId
             })
         },
-        saveWidgets: () => {
-            
-
-
-            dispatch({
-                 type: "SAVE_ALL",
-            })
+        saveWidgets: (topicId, widgets) => {
+            WidgetService.findWidgetsForTopic(topicId)
+                .then(widgetsForTopic => {
+                    let createWidgets = [...widgets];
+                    createWidgets.filter(widget => !widgetsForTopic.includes(widget.id));
+                    let deleteWidgets = [...widgetsForTopic];
+                    deleteWidgets.filter(widget => !widgets.includes(widget.id));
+                    let updateWidgets = [...widgets];
+                    updateWidgets.filter(widget => widgetsForTopic.includes(widget.id));
+                    createWidgets.map(widget => WidgetService.createWidget(topicId, widget));
+                    deleteWidgets.map(widget => WidgetService.deleteWidget(widget.id));
+                    updateWidgets.map(widget => WidgetService.updateWidget(widget.id, widget));
+                    dispatch({
+                        type: "SAVE_ALL",
+                    })
+                })
         }
     }
 }

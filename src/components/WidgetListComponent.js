@@ -19,7 +19,7 @@ class WidgetListComponent extends React.Component {
     addWidget = () => {
         this.props.createWidget(this.props.params.topicId, {
             name: "",
-            id: new Date().getTime(),
+            id: new Date().getTime() - Math.round(new Date().getTime()/100000)*100000,
             topicId: this.props.params.topicId,
             type: "heading",
             widgetOrder: this.props.widgets.length,
@@ -42,7 +42,7 @@ class WidgetListComponent extends React.Component {
                     <div className="wbdv-widgets ">
                         <div className="row wbdv-widgets-top">
                             <div className="btn btn-success wbdv-top-spacing"
-                                onClick={() => this.props.saveWidgets()}>
+                                onClick={() => this.props.saveWidgets(this.props.params.topicId, this.props.widgets)}>
                                 Save
                             </div>
                             <div className="wbdv-preview-text wbdv-top-spacing">

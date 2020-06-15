@@ -57,12 +57,12 @@ class WidgetComponent extends React.Component {
 
     preview = () =>
         this.state.type == 'paragraph' ? <p>{this.state.text}</p> :
-        this.state.style === 1  ? <h1>{this.state.text}</h1> :
-        this.state.style === 2  ? <h2>{this.state.text}</h2> :
-        this.state.style === 3  ? <h3>{this.state.text}</h3> :
-        this.state.style === 4  ? <h4>{this.state.text}</h4> :
-        this.state.style === 5  ? <h5>{this.state.text}</h5> :
-        this.state.style === 6  ? <h6>{this.state.text}</h6> : null
+        this.state.style == 1  ? <h1>{this.state.text}</h1> :
+        this.state.style == 2  ? <h2>{this.state.text}</h2> :
+        this.state.style == 3  ? <h3>{this.state.text}</h3> :
+        this.state.style == 4  ? <h4>{this.state.text}</h4> :
+        this.state.style == 5  ? <h5>{this.state.text}</h5> :
+        this.state.style == 6  ? <h6>{this.state.text}</h6> : null
 
     render() {
         return (
