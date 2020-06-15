@@ -41,7 +41,8 @@ class WidgetListComponent extends React.Component {
                     this.props.params.topicId &&
                     <div className="wbdv-widgets ">
                         <div className="row wbdv-widgets-top">
-                            <div className="btn btn-success wbdv-top-spacing">
+                            <div className="btn btn-success wbdv-top-spacing"
+                                onClick={() => this.props.saveWidgets()}>
                                 Save
                             </div>
                             <div className="wbdv-preview-text wbdv-top-spacing">

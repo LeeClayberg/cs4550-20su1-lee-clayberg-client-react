@@ -35,6 +35,14 @@ const dispatchToPropertyMapper = (dispatch) => {
                 type: "DELETE_WIDGET",
                 widgetId: widgetId
             })
+        },
+        saveWidgets: () => {
+            
+
+
+            dispatch({
+                 type: "SAVE_ALL",
+            })
         }
     }
 }

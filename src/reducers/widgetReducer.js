@@ -27,6 +27,10 @@ const widgetReducer = (state=initialState, action) => {
                 ...state,
                 widgets: [...state.widgets, action.newWidget]
             }
+        case "SAVE_ALL":
+            return {
+
+            }
         default:
             return state
     }
