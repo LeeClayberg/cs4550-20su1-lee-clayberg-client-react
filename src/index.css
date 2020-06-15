@@ -231,6 +231,10 @@ a:hover {
   color: #007bff;
 }
 
+.wbdv-unindent {
+  margin-top: -50px;
+}
+
 .wbdv-check {
   color: #acacac;
   padding-top: 5px;
@@ -401,7 +405,7 @@ a:hover {
 
 .wbdv-widgets {
   background-color: white;
-  padding: 20px 30px;
+  padding: 0px 30px 20px;
   font-size: 20px;
 }
 
@@ -424,7 +428,7 @@ a:hover {
 }
 
 .wbdv-widget-top-col {
-  padding: 20px 0px;
+  padding: 10px 0px 20px;
 }
 
 .wbdv-widget-btn {

@@ -21,7 +21,7 @@ class CourseEditorContainer extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container wbdv-unindent">
                 <div className="wbdv-module-top font-weight-bold">
                     <div className="row wbdv-no-padding">
                         <div className="col-2 col-md-1 wbdv-no-padding">

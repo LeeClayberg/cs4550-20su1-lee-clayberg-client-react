@@ -14,30 +14,32 @@ const dispatchToPropertyMapper = (dispatch) => {
         findWidgetsForTopic: (topicId) => {
             WidgetService.findWidgetsForTopic(topicId)
                 .then(widgetsForTopic => dispatch({
-                                                         type: 'FIND_ALL_WIDGETS_FOR_TOPIC',
-                                                         widgets: widgetsForTopic
-                                                     }))
+                    type: 'FIND_ALL_WIDGETS_FOR_TOPIC',
+                    widgets: widgetsForTopic
+                }))
+        },
+        findLocalWidgetsForTopic: () => {
+            dispatch({
+                type: 'FIND_ALL_LOCAL_WIDGETS_FOR_TOPIC'
+            })
         },
         updateWidget: (widgetId, newWidgetData) => {
-            WidgetService.updateWidget(widgetId, newWidgetData)
-                .then(status => dispatch({
-                                             type: 'UPDATE_WIDGET',
-                                             updatedWidget: newWidgetData
-                                         }))
+            dispatch({
+                type: 'UPDATE_WIDGET',
+                updatedWidget: newWidgetData
+            })
         },
         createWidget: (topicId, newWidget) => {
-            WidgetService.createWidget(topicId, newWidget)
-                .then(actualNewWidget => dispatch({
-                                                     type: "CREATE_WIDGET",
-                                                     newWidget: actualNewWidget
-                                                 }))
+            dispatch({
+                type: "CREATE_WIDGET",
+                newWidget: newWidget
+            })
         },
         deleteWidget: (widgetId) => {
-            WidgetService.deleteWidget(widgetId)
-                .then(status => dispatch({
-                                             type: "DELETE_WIDGET",
-                                             widgetId: widgetId
-                                         }))
+            dispatch({
+                type: "DELETE_WIDGET",
+                widgetId: widgetId
+            })
         }
     }
 }
