@@ -1,10 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 class TopicPillsComponent extends React.Component {
     state = {
         newTopicTitle: 'New Topic',
         editingTopic: {},
-        selected: {}
+        selected: this.props.params.topicId
     }
 
     componentDidMount() {
@@ -12,11 +13,12 @@ class TopicPillsComponent extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps.params.moduleId !== this.props.params.moduleId ||
-            prevProps.params.lessonId !== this.props.params.lessonId) {
+        if (prevProps.params.lessonId !== this.props.params.lessonId) {
             this.props.findTopicsForLesson(this.props.params.lessonId);
+        }
+        if (prevProps.params.topicId !== this.props.params.topicId) {
             this.setState({
-                selected: {}
+                 selected: this.props.params.topicId
             });
         }
     }
@@ -27,8 +29,9 @@ class TopicPillsComponent extends React.Component {
                 <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
                     {
                         this.props.topics.map(topic =>
-                             <il className={`nav-item topic-link wbdv-topic-pill ${this.state.selected === topic._id ? "active" : ""}`}
-                                 onClick={() => {
+                             <Link className={`nav-item topic-link wbdv-topic-pill ${this.state.selected === topic._id ? "active" : ""}`}
+                                   to={`/editor/${this.props.params.courseId}/modules/${this.props.params.moduleId}/lessons/${this.props.params.lessonId}/topics/${topic._id}`}
+                                   onClick={() => {
                                      this.setState({
                                           selected: topic._id
                                      });
@@ -67,7 +70,7 @@ class TopicPillsComponent extends React.Component {
                                      <i className="btn fa fa-pencil float-right wbdv-topic-button"
                                         onClick={() => this.setState({editingTopic: topic})}/>
                                  }
-                             </il>)
+                             </Link>)
                     }
                     {
                         this.props.params.lessonId &&

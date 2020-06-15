@@ -368,6 +368,10 @@ a:hover {
   border-radius: 0px;
 }
 
+.wbdv-topic-pill:hover {
+  color: white;
+}
+
 .wbdv-collapsed-lesson {
   padding-top: 10px;
   padding-bottom: 8px;
@@ -441,6 +445,10 @@ a:hover {
 
 .wbdv-widget-vertical {
   margin-bottom: 20px;
+}
+
+.wbdv-widget-add {
+  padding: 3px 8px;
 }
 
 /* switch */
