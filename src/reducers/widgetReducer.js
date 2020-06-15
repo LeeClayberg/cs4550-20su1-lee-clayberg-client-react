@@ -27,6 +27,14 @@ const widgetReducer = (state=initialState, action) => {
                 ...state,
                 widgets: [...state.widgets, action.newWidget]
             }
+        case "MOVE_UP":
+            return action.widget.widgetOrder > 0 ?
+                {...state, widgets: [state.widgets[action.widget.widgetOrder - 1], state.widgets[action.widget.widgetOrder]]} :
+                state
+        case "MOVE_DOWN":
+            return action.widget.widgetOrder < state.widgets.length - 1 ?
+                {...state, widgets: [state.widgets[action.widget.widgetOrder + 1], state.widgets[action.widget.widgetOrder]]} :
+                   state
         case "SAVE_ALL":
             return state
         default:
