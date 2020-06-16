@@ -86,11 +86,11 @@ class WidgetComponent extends React.Component {
                                     <option value="paragraph">Paragraph</option>
                                 </select>
                                 <div className="btn btn-warning float-right wbdv-widget-btn"
-                                     >
+                                     onClick={() => this.props.moveDownWidget(this.props.widget)}>
                                     <i className="fa fa-arrow-down"/>
                                 </div>
                                 <div className="btn btn-warning float-right wbdv-widget-btn"
-                                     >
+                                     onClick={() => this.props.moveUpWidget(this.props.widget)}>
                                     <i className="fa fa-arrow-up"/>
                                 </div>
                             </div>

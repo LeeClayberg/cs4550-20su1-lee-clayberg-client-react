@@ -36,6 +36,18 @@ const dispatchToPropertyMapper = (dispatch) => {
                 widgetId: widgetId
             })
         },
+        moveUpWidget: (moveWidget) => {
+            dispatch({
+                         type: "MOVE_UP",
+                         moveWidget: moveWidget
+                     })
+        },
+        moveDownWidget: (moveWidget) => {
+            dispatch({
+                         type: "MOVE_DOWN",
+                         moveWidget: moveWidget
+                     })
+        },
         saveWidgets: (topicId, widgets) => {
             WidgetService.findWidgetsForTopic(topicId)
                 .then(widgetsForTopic => {

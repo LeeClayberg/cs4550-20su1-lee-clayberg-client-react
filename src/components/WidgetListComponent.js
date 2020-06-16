@@ -34,6 +34,19 @@ class WidgetListComponent extends React.Component {
         }))
     };
 
+    moveUp = (widget) => {
+        this.props.moveUpWidget(widget);
+        this.setState({
+                widgets: this.props.widgets
+        })};
+
+    moveDown = (widget) => {
+        this.props.moveDownWidget(widget);
+        this.setState({
+                          widgets: this.props.widgets
+                      })};
+
+
     render() {
         return (
             <span>
@@ -61,6 +74,8 @@ class WidgetListComponent extends React.Component {
                             this.props.widgets.map(widget =>
                                  <WidgetComponent widget={widget} deleteWidget={this.props.deleteWidget}
                                                   updateWidget={this.props.updateWidget}
+                                                  moveUpWidget={this.moveUp}
+                                                  moveDownWidget={this.moveDown}
                                                   preview={this.state.preview}/>)
                             }
                             <div className="col-12">
