@@ -15,7 +15,7 @@ const dispatchToPropertyMapper = (dispatch) => {
             WidgetService.findWidgetsForTopic(topicId)
                 .then(widgetsForTopic => dispatch({
                     type: 'FIND_ALL_WIDGETS_FOR_TOPIC',
-                    widgets: widgetsForTopic
+                    widgets: widgetsForTopic.sort((a,b) => (a.widgetOrder > b.widgetOrder) ? 1 : -1)
                 }))
         },
         updateWidget: (widgetId, newWidgetData) => {
@@ -36,21 +36,10 @@ const dispatchToPropertyMapper = (dispatch) => {
                 widgetId: widgetId
             })
         },
-        moveUpWidget: (widget) => {
-            dispatch({
-                type: "MOVE_UP",
-                widget: widget
-            })
-        },
-        moveDownWidget: (widget) => {
-            dispatch({
-                 type: "MOVE_DOWN",
-                 widget: widget
-            })
-        },
         saveWidgets: (topicId, widgets) => {
             WidgetService.findWidgetsForTopic(topicId)
                 .then(widgetsForTopic => {
+                    widgets.map((widget, index) => widget.widgetOrder = index);
                     let createWidgets = [...widgets];
                     createWidgets.filter(widget => !widgetsForTopic.includes(widget.id));
                     let deleteWidgets = [...widgetsForTopic];

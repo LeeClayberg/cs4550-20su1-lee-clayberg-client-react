@@ -429,6 +429,7 @@ a:hover {
 
 .wbdv-widget-top-col {
   padding: 10px 0px 20px;
+  text-transform: capitalize;
 }
 
 .wbdv-widget-btn {
