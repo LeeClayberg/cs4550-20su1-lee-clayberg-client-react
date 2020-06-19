@@ -19,6 +19,18 @@ class WidgetComponent extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.widget.id !== this.props.widget.id) {
+            this.setState({
+                              name: this.props.widget.name,
+                              type: this.props.widget.type,
+                              widgetOrder: this.props.widget.widgetOrder,
+                              style: this.props.widget.style,
+                              text: this.props.widget.text
+                          })
+        }
+    }
+
     updateType = (type) => {
         this.setState(prevState => ({
             type: type

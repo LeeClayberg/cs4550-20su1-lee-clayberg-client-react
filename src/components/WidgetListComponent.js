@@ -48,6 +48,7 @@ class WidgetListComponent extends React.Component {
 
 
     render() {
+        console.log(this.props.widgets);
         return (
             <span>
                 {
