@@ -172,6 +172,21 @@ class WidgetComponent extends React.Component {
                                       placeholder="Paragraph text"/>
                         }
                         {
+                            this.state.type == 'list' &&
+                            <span>
+                                <textarea className="form-control wbdv-widget-vertical"
+                                          value={this.state.text}
+                                          onChange={(event) => this.updateText(event.target.value)}
+                                          placeholder="Enter one list item per line"/>
+                                <select className="form-control wbdv-widget-vertical"
+                                value={this.state.value}
+                                onChange={(event) => this.updateValue(event.target.value)}>
+                                    <option value="unordered">Unordered list</option>
+                                    <option value="ordered">Ordered list</option>
+                                </select>
+                            </span>
+                        }
+                        {
                             this.state.type == 'image' &&
                             <span>
                                 <input type="text" className="form-control wbdv-widget-vertical"
