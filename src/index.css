@@ -453,7 +453,12 @@ a:hover {
 }
 
 .wbdv-widget-add {
+  margin-top: 20px;
   padding: 3px 8px;
+}
+
+.wbdv-widget-img {
+  max-width: 100%;
 }
 
 /* switch */

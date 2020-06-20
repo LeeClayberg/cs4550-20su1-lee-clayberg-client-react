@@ -22,7 +22,9 @@ class WidgetListComponent extends React.Component {
             type: "heading",
             widgetOrder: this.props.widgets.length,
             style: 1,
-            text: ""
+            text: "",
+            value: "unordered",
+            src: ""
         })
     }
 

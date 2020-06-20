@@ -6,7 +6,9 @@ class WidgetComponent extends React.Component {
         type: "",
         widgetOrder: 0,
         style: 1,
-        text: ""
+        text: "",
+        value: "unordered",
+        src: ""
     }
 
     componentDidMount() {
@@ -15,7 +17,9 @@ class WidgetComponent extends React.Component {
              type: this.props.widget.type,
              widgetOrder: this.props.widget.widgetOrder,
              style: this.props.widget.style,
-             text: this.props.widget.text
+             text: this.props.widget.text,
+             value: this.props.widget.value,
+             src: this.props.widget.src
         })
     }
 
@@ -26,7 +30,9 @@ class WidgetComponent extends React.Component {
                               type: this.props.widget.type,
                               widgetOrder: this.props.widget.widgetOrder,
                               style: this.props.widget.style,
-                              text: this.props.widget.text
+                              text: this.props.widget.text,
+                              value: this.props.widget.value,
+                              src: this.props.widget.src
                           })
         }
     }
@@ -49,12 +55,39 @@ class WidgetComponent extends React.Component {
         });
     }
 
+    updateSrc = (src) => {
+        this.setState(prevState => ({
+            src: src
+        }));
+        this.props.updateWidget(this.props.widget.id, {
+            ...this.props.widget, src: src
+        });
+    }
+
     updateStyle = (style) => {
         this.setState(prevState => ({
             style: style
         }));
         this.props.updateWidget(this.props.widget.id, {
             ...this.props.widget, style: style
+        });
+    }
+
+    updateValue = (value) => {
+        this.setState(prevState => ({
+            value: value
+        }));
+        this.props.updateWidget(this.props.widget.id, {
+            ...this.props.widget, value: value
+        });
+    }
+
+    updateType = (type) => {
+        this.setState(prevState => ({
+            type: type
+        }));
+        this.props.updateWidget(this.props.widget.id, {
+            ...this.props.widget, type: type
         });
     }
 
@@ -69,6 +102,9 @@ class WidgetComponent extends React.Component {
 
     preview = () =>
         this.state.type == 'paragraph' ? <p>{this.state.text}</p> :
+        this.state.type == 'image' ? <img src={this.state.src} className="wbdv-widget-img" alt="Picture goes here"/> :
+        this.state.type == 'list' && this.state.value == 'unordered' ? <ul>{this.state.text.split('\n').map(line => <li>{line}</li>)}</ul> :
+        this.state.type == 'list' && this.state.value == 'ordered' ? <ol>{this.state.text.split('\n').map(line => <li>{line}</li>)}</ol> :
         this.state.style == 1  ? <h1>{this.state.text}</h1> :
         this.state.style == 2  ? <h2>{this.state.text}</h2> :
         this.state.style == 3  ? <h3>{this.state.text}</h3> :
@@ -96,6 +132,8 @@ class WidgetComponent extends React.Component {
                                         onChange={(event) => this.updateType(event.target.value)}>
                                     <option value="heading" selected>Heading</option>
                                     <option value="paragraph">Paragraph</option>
+                                    <option value="list">List</option>
+                                    <option value="image">Image</option>
                                 </select>
                                 <div className="btn btn-warning float-right wbdv-widget-btn"
                                      onClick={() => this.props.moveDownWidget(this.props.widget)}>
@@ -114,7 +152,7 @@ class WidgetComponent extends React.Component {
                                        placeholder="Heading text"
                                        value={this.state.text}
                                        onChange={(event) => this.updateText(event.target.value)}/>
-                                < select className="form-control wbdv-widget-vertical"
+                                <select className="form-control wbdv-widget-vertical"
                                     value={this.state.style}
                                     onChange={(event) => this.updateStyle(event.target.value)}>
                                     <option value={1}>Heading 1</option>
@@ -132,6 +170,15 @@ class WidgetComponent extends React.Component {
                                       value={this.state.text}
                                       onChange={(event) => this.updateText(event.target.value)}
                                       placeholder="Paragraph text"/>
+                        }
+                        {
+                            this.state.type == 'image' &&
+                            <span>
+                                <input type="text" className="form-control wbdv-widget-vertical"
+                                       placeholder="Image URL"
+                                       value={this.state.src}
+                                       onChange={(event) => this.updateSrc(event.target.value)}/>
+                            </span>
                         }
                         <input type="text" className="form-control wbdv-widget-vertical"
                                placeholder="Widget name"
