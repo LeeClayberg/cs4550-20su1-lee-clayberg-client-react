@@ -7,13 +7,11 @@ class WidgetListComponent extends React.Component {
     }
 
     componentDidMount() {
-        console.log("start " + this.props.params.topicId);
         this.props.findWidgetsForTopic(this.props.params.topicId)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.params.topicId !== this.props.params.topicId) {
-            console.log("end " + this.props.params.topicId);
             this.props.findWidgetsForTopic(this.props.params.topicId);
         }
     }
@@ -48,6 +46,7 @@ class WidgetListComponent extends React.Component {
 
 
     render() {
+        console.log(this.props.widgets);
         return (
             <span>
                 {

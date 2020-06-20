@@ -52,12 +52,11 @@ const dispatchToPropertyMapper = (dispatch) => {
             WidgetService.findWidgetsForTopic(topicId)
                 .then(widgetsForTopic => {
                     widgets.map((widget, index) => widget.widgetOrder = index);
-                    let createWidgets = [...widgets];
-                    createWidgets.filter(widget => !widgetsForTopic.includes(widget.id));
-                    let deleteWidgets = [...widgetsForTopic];
-                    deleteWidgets.filter(widget => !widgets.includes(widget.id));
-                    let updateWidgets = [...widgets];
-                    updateWidgets.filter(widget => widgetsForTopic.includes(widget.id));
+                    let widgetIds = widgets.map(widget => widget.id);
+                    let oldWidgetIds = widgetsForTopic.map(widget => widget.id);
+                    let createWidgets = widgets.filter(widget => !oldWidgetIds.includes(widget.id));
+                    let deleteWidgets = widgetsForTopic.filter(widget => !widgetIds.includes(widget.id));
+                    let updateWidgets = widgets.filter(widget => oldWidgetIds.includes(widget.id));
                     createWidgets.map(widget => WidgetService.createWidget(topicId, widget));
                     deleteWidgets.map(widget => WidgetService.deleteWidget(widget.id));
                     updateWidgets.map(widget => WidgetService.updateWidget(widget.id, widget));

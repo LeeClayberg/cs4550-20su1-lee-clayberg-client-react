@@ -20,7 +20,7 @@ class WidgetComponent extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps.widget.id !== this.props.widget.id) {
+        if (prevProps.widget.id != this.props.widget.id) {
             this.setState({
                               name: this.props.widget.name,
                               type: this.props.widget.type,
