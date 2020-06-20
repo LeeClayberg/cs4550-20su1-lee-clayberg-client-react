@@ -37,5 +37,6 @@ export default {
     findTopicsForLesson,
     deleteTopic,
     updateTopic,
-    createTopic
+    createTopic,
+    findTopicById
 }
