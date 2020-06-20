@@ -29,15 +29,15 @@ class TopicPillsComponent extends React.Component {
                 <ul className="nav nav-pills nav-fill wbdv-topic-pill-list">
                     {
                         this.props.topics.map(topic =>
-                             <Link className={`nav-item topic-link wbdv-topic-pill ${this.state.selected === topic._id ? "active" : ""}`}
-                                   to={`/editor/${this.props.params.courseId}/modules/${this.props.params.moduleId}/lessons/${this.props.params.lessonId}/topics/${topic._id}`}
+                             <Link className={`nav-item topic-link wbdv-topic-pill ${this.state.selected == topic.id ? "active" : ""}`}
+                                   to={`/editor/${this.props.params.courseId}/modules/${this.props.params.moduleId}/lessons/${this.props.params.lessonId}/topics/${topic.id}`}
                                    onClick={() => {
                                      this.setState({
-                                          selected: topic._id
+                                          selected: topic.id
                                      });
                                  }}>
                                  {
-                                     this.state.editingTopic._id === topic._id &&
+                                     this.state.editingTopic.id == topic.id &&
                                      <input value={this.state.editingTopic.title}
                                             onclick="this.select()"
                                             onChange={(e) => {
@@ -51,24 +51,24 @@ class TopicPillsComponent extends React.Component {
                                             }}/>
                                  }
                                  {
-                                     this.state.editingTopic._id !== topic._id &&
+                                     this.state.editingTopic.id != topic.id && this.state.selected == topic.id &&
+                                     <i className="btn fa fa-pencil float-right wbdv-topic-button"
+                                        onClick={() => this.setState({editingTopic: topic})}/>
+                                 }
+                                 {
+                                     this.state.editingTopic.id != topic.id &&
                                      topic.title
                                  }
                                  {
-                                     this.state.editingTopic._id === topic._id &&
+                                     this.state.editingTopic.id == topic.id &&
                                      <span>
                                          <i className="btn fa fa-times float-right wbdv-topic-button"
-                                            onClick={() => this.props.deleteTopic(topic._id)}/>
+                                            onClick={() => this.props.deleteTopic(topic.id)}/>
                                          <i className="btn fa fa-check float-right wbdv-topic-button"
                                             onClick={() => {
-                                               this.props.updateTopic(this.state.editingTopic._id, this.state.editingTopic)
+                                               this.props.updateTopic(this.state.editingTopic.id, this.state.editingTopic)
                                                this.setState({editingTopic: {}})}}/>
                                     </span>
-                                 }
-                                 {
-                                     this.state.editingTopic._id !== topic._id && this.state.selected === topic._id &&
-                                     <i className="btn fa fa-pencil float-right wbdv-topic-button"
-                                        onClick={() => this.setState({editingTopic: topic})}/>
                                  }
                              </Link>)
                     }

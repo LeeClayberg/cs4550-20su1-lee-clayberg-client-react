@@ -52,6 +52,7 @@ class CourseEditorContainer extends React.Component {
                         }
                         <div className="">
                             {
+                                this.props.match.params.topicId &&
                                 <WidgetListContainer {...this.props.match}/>
                             }
                         </div>

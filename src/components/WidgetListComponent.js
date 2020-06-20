@@ -7,20 +7,20 @@ class WidgetListComponent extends React.Component {
     }
 
     componentDidMount() {
+        console.log("start " + this.props.params.topicId);
         this.props.findWidgetsForTopic(this.props.params.topicId)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.params.topicId !== this.props.params.topicId) {
+            console.log("end " + this.props.params.topicId);
             this.props.findWidgetsForTopic(this.props.params.topicId);
         }
     }
 
     addWidget = () => {
-        this.props.createWidget(this.props.params.topicId, {
+        this.props.createWidget({
             name: "",
-            id: new Date().getTime() - Math.round(new Date().getTime()/100000)*100000,
-            topicId: this.props.params.topicId,
             type: "heading",
             widgetOrder: this.props.widgets.length,
             style: 1,
@@ -48,7 +48,6 @@ class WidgetListComponent extends React.Component {
 
 
     render() {
-        console.log(this.props.widgets);
         return (
             <span>
                 {

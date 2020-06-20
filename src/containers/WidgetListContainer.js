@@ -24,7 +24,7 @@ const dispatchToPropertyMapper = (dispatch) => {
                 updatedWidget: newWidgetData
             })
         },
-        createWidget: (topicId, newWidget) => {
+        createWidget: (newWidget) => {
             dispatch({
                 type: "CREATE_WIDGET",
                 newWidget: newWidget
