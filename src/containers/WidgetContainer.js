@@ -1,6 +1,10 @@
 import React from "react";
+import WidgetListComponent from "../components/WidgetListComponent"
+import ImageWidget from "../components/ImageWidget";
+import HeadingWidget from "../components/HeadingWidget";
+import ParagraphWidget from "../components/ParagraphWidget";
 
-class WidgetComponent extends React.Component {
+class WidgetContainer extends React.Component {
     state = {
         name: "",
         type: "",
@@ -147,53 +151,21 @@ class WidgetComponent extends React.Component {
                         </div>
                         {
                             this.state.type == 'heading' &&
-                            <span>
-                                <input type="text" className="form-control wbdv-widget-vertical"
-                                       placeholder="Heading text"
-                                       value={this.state.text}
-                                       onChange={(event) => this.updateText(event.target.value)}/>
-                                <select className="form-control wbdv-widget-vertical"
-                                    value={this.state.style}
-                                    onChange={(event) => this.updateStyle(event.target.value)}>
-                                    <option value={1}>Heading 1</option>
-                                    <option value={2}>Heading 2</option>
-                                    <option value={3}>Heading 3</option>
-                                    <option value={4}>Heading 4</option>
-                                    <option value={5}>Heading 5</option>
-                                    <option value={6}>Heading 6</option>
-                                </select>
-                            </span>
+                            <HeadingWidget text={this.state.text} style={this.state.style}
+                                           updateText={this.updateText} updateStyle={this.updateStyle}/>
                         }
                         {
                             this.state.type == 'paragraph' &&
-                            <textarea className="form-control wbdv-widget-vertical"
-                                      value={this.state.text}
-                                      onChange={(event) => this.updateText(event.target.value)}
-                                      placeholder="Paragraph text"/>
+                            <ParagraphWidget text={this.state.text} updateText={this.updateText}/>
                         }
                         {
                             this.state.type == 'list' &&
-                            <span>
-                                <textarea className="form-control wbdv-widget-vertical"
-                                          value={this.state.text}
-                                          onChange={(event) => this.updateText(event.target.value)}
-                                          placeholder="Enter one list item per line"/>
-                                <select className="form-control wbdv-widget-vertical"
-                                value={this.state.value}
-                                onChange={(event) => this.updateValue(event.target.value)}>
-                                    <option value="unordered">Unordered list</option>
-                                    <option value="ordered">Ordered list</option>
-                                </select>
-                            </span>
+                            <WidgetListComponent text={this.state.text} value={this.state.value}
+                                                 updateText={this.updateText} updateValue={this.updateValue}/>
                         }
                         {
                             this.state.type == 'image' &&
-                            <span>
-                                <input type="text" className="form-control wbdv-widget-vertical"
-                                       placeholder="Image URL"
-                                       value={this.state.src}
-                                       onChange={(event) => this.updateSrc(event.target.value)}/>
-                            </span>
+                            <ImageWidget src={this.state.src} updateSrc={this.updateSrc}/>
                         }
                         <input type="text" className="form-control wbdv-widget-vertical"
                                placeholder="Widget name"
@@ -213,4 +185,4 @@ class WidgetComponent extends React.Component {
     }
 }
 
-export default WidgetComponent;
+export default WidgetContainer;

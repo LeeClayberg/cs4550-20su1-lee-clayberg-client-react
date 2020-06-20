@@ -1,5 +1,5 @@
 import {connect} from "react-redux";
-import WidgetListComponent from "../components/WidgetListComponent";
+import WidgetListInnerContainer from "./WidgetListInnerContainer";
 import WidgetService from "../services/WidgetService";
 
 const stateToPropertyMapper = (state, ownProps) => {
@@ -70,6 +70,6 @@ const dispatchToPropertyMapper = (dispatch) => {
 
 const WidgetListContainer = connect
 (stateToPropertyMapper, dispatchToPropertyMapper)
-(WidgetListComponent)
+(WidgetListInnerContainer)
 
 export default WidgetListContainer
