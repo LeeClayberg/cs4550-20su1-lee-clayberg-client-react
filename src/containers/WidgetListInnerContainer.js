@@ -20,6 +20,7 @@ class WidgetListInnerContainer extends React.Component {
         this.props.createWidget({
             name: "",
             type: "heading",
+            id: new Date().getUTCMilliseconds() * 1000,
             widgetOrder: this.props.widgets.length,
             style: 1,
             text: "",
